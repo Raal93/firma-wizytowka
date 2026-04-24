@@ -1,0 +1,9 @@
+.service-link h3 {
+  color: #3062c7;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.service-link:hover h3 {
+  text-decoration: underline;
+}
