@@ -4,7 +4,8 @@ export default function Contact() {
   return (
     <div>
       <h1>Kontakt</h1>
-      <p>Telefon / email — uzupełnisz później</p>
+      <p>tel: +48 000 000 000</p>
+      <p>email: smartinstalacje@firma.pl</p>
       <Link to="/">Powrót na stronę główną</Link>
     </div>
   );

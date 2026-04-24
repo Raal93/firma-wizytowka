@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <>
       <section>
-        <h1>Instalacje elektryczne i automatyka</h1>
+        <h1>Smart Instalacje Mateusz Czajkowski</h1>
+        <h3>Instalacje elektryczne i inteligentna automatyka budynkowa</h3>
         <p>Solidne wykonanie, nowoczesne rozwiązania.</p>
         <Link to="/kontakt">Kontakt</Link>
       </section>
