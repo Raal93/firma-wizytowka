@@ -42,6 +42,12 @@ main {
   padding: 48px 20px;
 }
 
+@media (max-width: 1000px) {
+  main {
+    padding: 32px 0;
+  }
+}
+
 section,
 main > div {
   background: white;
