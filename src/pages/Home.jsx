@@ -1,10 +1,13 @@
 import { services } from "../data/services";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
 import { Link } from "react-router-dom";
+import Hero from "../components/Hero/Hero";
+
 
 export default function Home() {
   return (
     <>
+    <Hero />
       <section>
         <h1>Smart Instalacje Mateusz Czajkowski</h1>
         <h3>Instalacje elektryczne i inteligentna automatyka budynkowa</h3>
