@@ -85,6 +85,8 @@
 
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Projects.css";
 import monitoring from "../../assets/images/monitoring.jpg";
 import monitoring1 from "../../assets/images/monitoring1.jpg";
@@ -287,10 +289,11 @@ function Projects() {
                   <li key={i}>{d}</li>
                 ))}
               </ul>
-
+                <Link to="/uslugi">
               <a href={active.offerLink} className="modal__button">
                 Zobacz ofertę
               </a>
+              </Link>
             </div>
           </div>
         </div>
