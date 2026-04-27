@@ -1,6 +1,6 @@
 import "./Hero.css";
-import rozdzielnia from "../../assets/images/rozdzielnia.jpg";
-import panel from "../../assets/images/panel.jpg";
+import hero from "../../assets/images/hero.jpg";
+import heroSm from "../../assets/images/heroSm.jpg";
 import { Link } from "react-router-dom";
 
 
@@ -28,7 +28,7 @@ function Hero() {
           <div className="hero__tile">
             <div className="hero__icon">⌂</div>
             <h3>Smart Home</h3>
-            <p>KNX / Loxone</p>
+            <p>Loxone</p>
           </div>
 
           <div className="hero__tile">
@@ -72,10 +72,10 @@ function Hero() {
         <picture>
           <source
             media="(max-width: 1000px)"
-            srcSet={panel}
+            srcSet={heroSm}
           />
         <img
-          src={rozdzielnia}
+          src={hero}
           alt="Rozdzielnia elektryczna smart home"
           className="hero__image"
         />
