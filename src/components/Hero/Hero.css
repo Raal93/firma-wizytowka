@@ -5,8 +5,7 @@
   align-items: center;
   gap: 48px;
   padding: 80px 8%;
-  background:
-    linear-gradient(90deg, #020617 0%, #0f172a 55%, #020617 100%);
+  background: linear-gradient(90deg, #020617 0%, #0f172a 55%, #020617 100%);
   color: #ffffff;
   overflow: hidden;
 }
@@ -61,13 +60,13 @@
   text-align: center;
   min-width: 0;
   width: 100%;
-
 }
 
 @media (max-width: 1400px) {
   .hero__tiles {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }}
+  }
+}
 
 .hero__icon {
   font-size: 32px;

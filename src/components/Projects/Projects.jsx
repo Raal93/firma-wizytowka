@@ -1,98 +1,11 @@
-// import "./Projects.css";
-
-// import realizacje1 from "../../assets/images/realizacje1.jpg";
-// import realizacje2 from "../../assets/images/realizacje2.jpg";
-// import realizacje3 from "../../assets/images/realizacje3.jpg";
-// import realizacje4 from "../../assets/images/realizacje4.jpg";
-// import realizacje5 from "../../assets/images/realizacje5.jpg";
-// import realizacje6 from "../../assets/images/realizacje6.jpg";
-
-// const projects = [
-//   {
-//     img: realizacje1,
-//     tag: "Monitoring",
-//     title: "CCTV – dom jednorodzinny",
-//     desc: "Kamery z podglądem na telefon i nagrywaniem zdarzeń.",
-//   },
-//   {
-//     img: realizacje2,
-//     tag: "Sieć",
-//     title: "LAN i WiFi",
-//     desc: "Stabilna infrastruktura sieciowa bez martwych stref.",
-//   },
-//   {
-//     img: realizacje3,
-//     tag: "Alarm",
-//     title: "System alarmowy",
-//     desc: "Czujniki, centrala i powiadomienia na telefon.",
-//   },
-//   {
-//     img: realizacje4,
-//     tag: "Elektryka",
-//     title: "Rozdzielnia elektryczna",
-//     desc: "Czytelna instalacja przygotowana pod dalszą rozbudowę.",
-//   },
-//   {
-//     img: realizacje5,
-//     tag: "Smart Home",
-//     title: "Instalacja pod Loxone",
-//     desc: "Okablowanie i logika gotowe pod automatykę budynku.",
-//   },
-//   {
-//     img: realizacje6,
-//     tag: "Domofon",
-//     title: "Wideodomofon i brama",
-//     desc: "Kontrola wejścia z domu oraz z telefonu.",
-//   },
-// ];
-
-// function Projects() {
-//   return (
-//     <section className="projects">
-//       <div className="projects__header">
-//         <p className="projects__label">REALIZACJE</p>
-//         <h2>Zobacz, jak wygląda dobrze wykonana instalacja</h2>
-//         <p>
-//           Kilka przykładów prac z zakresu instalacji elektrycznych,
-//           niskoprądowych, sieciowych i automatyki budynkowej.
-//         </p>
-//       </div>
-
-//       <div className="projects__grid">
-//         {projects.map((project) => (
-//           <article className="projects__card" key={project.title}>
-//             <img src={project.img} alt={project.title} />
-
-//             <div className="projects__overlay">
-//               <span>{project.tag}</span>
-//               <h3>{project.title}</h3>
-//               <p>{project.desc}</p>
-//             </div>
-//           </article>
-//         ))}
-//       </div>
-
-//       <div className="projects__cta">
-//         <a href="#kontakt" className="projects__button">
-//           Poproś o podobną realizację
-//         </a>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Projects;
-
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import "./Projects.css";
+
 import monitoring from "../../assets/images/monitoring.jpg";
 import monitoring1 from "../../assets/images/monitoring1.jpg";
 import monitoring2 from "../../assets/images/monitoring2.jpg";
 import monitoring3 from "../../assets/images/monitoring3.jpg";
-
 
 import sieci from "../../assets/images/sieci.jpg";
 import sieci1 from "../../assets/images/sieci1.jpg";
@@ -125,12 +38,7 @@ const projects = [
     tag: "Monitoring",
     title: "Monitoring CCTV – dom jednorodzinny",
     desc: "Podgląd na żywo i nagrywanie zdarzeń – pełna kontrola nad posesją z telefonu.",
-    details: [
-      "Dobór lokalizacji kamer",
-      "Prowadzenie okablowania",
-      "Montaż i konfiguracja rejestratora",
-      "Podgląd na telefonie",
-    ],
+    details: ["Dobór lokalizacji kamer", "Prowadzenie okablowania", "Montaż i konfiguracja rejestratora", "Podgląd na telefonie"],
     offerLink: "/oferta/cctv",
   },
   {
@@ -140,12 +48,7 @@ const projects = [
     tag: "Sieć",
     title: "Sieć LAN i WiFi – dom jednorodzinny",
     desc: "Stabilny i szybki internet w każdym pomieszczeniu – bez zrywających połączeń.",
-    details: [
-      "Rozprowadzenie okablowania LAN",
-      "Montaż punktów dostępowych WiFi",
-      "Konfiguracja sieci",
-      "Testy zasięgu i wydajności",
-    ],
+    details: ["Rozprowadzenie okablowania LAN", "Montaż punktów dostępowych WiFi", "Konfiguracja sieci", "Testy zasięgu i wydajności"],
     offerLink: "/oferta/sieci",
   },
   {
@@ -155,12 +58,7 @@ const projects = [
     tag: "Alarm",
     title: "System alarmowy – zabezpieczenie domu",
     desc: "Czujniki ruchu i powiadomienia na telefon – szybka reakcja na zagrożenie.",
-    details: [
-      "Instalacja czujników ruchu i otwarcia",
-      "Konfiguracja centrali alarmowej",
-      "Powiadomienia mobilne",
-      "Integracja z innymi systemami",
-    ],
+    details: ["Instalacja czujników ruchu i otwarcia", "Konfiguracja centrali alarmowej", "Powiadomienia mobilne", "Integracja z innymi systemami"],
     offerLink: "/oferta/alarm",
   },
   {
@@ -170,12 +68,7 @@ const projects = [
     tag: "Elektryka",
     title: "Rozdzielnia elektryczna – uporządkowana instalacja",
     desc: "Czytelna i bezpieczna instalacja przygotowana pod dalszą rozbudowę.",
-    details: [
-      "Montaż i konfiguracja rozdzielni",
-      "Oznaczenie obwodów",
-      "Zabezpieczenia instalacji",
-      "Przygotowanie pod smart home",
-    ],
+    details: ["Montaż i konfiguracja rozdzielni", "Oznaczenie obwodów", "Zabezpieczenia instalacji", "Przygotowanie pod smart home"],
     offerLink: "/oferta/elektryka",
   },
   {
@@ -200,12 +93,7 @@ const projects = [
     tag: "Domofon",
     title: "Wideodomofon i sterowanie bramą",
     desc: "Kontrola wejścia do domu z poziomu telefonu i panelu wewnętrznego.",
-    details: [
-      "Montaż wideodomofonu",
-      "Integracja z bramą i furtką",
-      "Podgląd obrazu na telefonie",
-      "Zdalne otwieranie",
-    ],
+    details: ["Montaż wideodomofonu", "Integracja z bramą i furtką", "Podgląd obrazu na telefonie", "Zdalne otwieranie"],
     offerLink: "/oferta/domofony",
   },
 ];
@@ -213,6 +101,7 @@ const projects = [
 function Projects() {
   const [active, setActive] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
+  const [closing, setClosing] = useState(false);
 
   const openModal = (project) => {
     setActive(project);
@@ -220,26 +109,49 @@ function Projects() {
   };
 
   const closeModal = () => {
-    setActive(null);
+    setClosing(true);
+    setTimeout(() => {
+      setActive(null);
+      setClosing(false);
+    }, 200);
   };
+
+  const nextImage = () => {
+    if (!active) return;
+    setImageIndex((prev) => (prev === active.gallery.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevImage = () => {
+    if (!active) return;
+    setImageIndex((prev) => (prev === 0 ? active.gallery.length - 1 : prev - 1));
+  };
+
+  useEffect(() => {
+    if (!active) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [active]);
 
   return (
     <section className="projects">
       <div className="projects__header">
-         <p className="projects__label">REALIZACJE</p>
-         <h2>Zobacz, jak wygląda dobrze wykonana instalacja</h2>
-         <p>
-           Kilka przykładów prac z zakresu instalacji elektrycznych,
-           niskoprądowych, sieciowych i automatyki budynkowej.
-         </p>
-       </div>
+        <p className="projects__label">REALIZACJE</p>
+        <h2>Zobacz, jak wygląda dobrze wykonana instalacja</h2>
+        <p>Kilka przykładów prac z zakresu instalacji elektrycznych, niskoprądowych, sieciowych i automatyki budynkowej.</p>
+      </div>
       <div className="projects__grid">
         {projects.map((p) => (
-          <div
-            className="projects__card"
-            key={p.id}
-            onClick={() => openModal(p)}
-          >
+          <div className="projects__card" key={p.id} onClick={() => openModal(p)}>
             <img src={p.img} alt={p.title} />
             <div className="projects__overlay">
               <h3>{p.title}</h3>
@@ -250,31 +162,32 @@ function Projects() {
 
       {/* MODAL */}
       {active && (
-        <div className="modal" onClick={closeModal}>
-          <div
-            className="modal__content"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className={`modal ${closing ? "modal--closing" : ""}`} onClick={closeModal}>
+          <div className="modal__content" onClick={(e) => e.stopPropagation()}>
             <button className="modal__close" onClick={closeModal}>
               ✕
             </button>
 
             <div className="modal__left">
               <div className="modal__imageFrame">
-              <img
-                src={active.gallery[imageIndex]}
-                alt="realizacja"
-              />
+                {active.gallery.length > 1 && (
+                  <button className="modal__arrow modal__arrow--left" onClick={prevImage} aria-label="Poprzednie zdjęcie">
+                    <span className="arrow-icon">‹</span>
+                  </button>
+                )}
+
+                <img src={active.gallery[imageIndex]} alt="realizacja" />
+
+                {active.gallery.length > 1 && (
+                  <button className="modal__arrow modal__arrow--right" onClick={nextImage} aria-label="Następne zdjęcie">
+                    <span className="arrow-icon">›</span>
+                  </button>
+                )}
               </div>
 
               <div className="modal__thumbs">
                 {active.gallery.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img}
-                    className={i === imageIndex ? "active" : ""}
-                    onClick={() => setImageIndex(i)}
-                  />
+                  <img key={i} src={img} className={i === imageIndex ? "active" : ""} onClick={() => setImageIndex(i)} />
                 ))}
               </div>
             </div>
@@ -289,10 +202,10 @@ function Projects() {
                   <li key={i}>{d}</li>
                 ))}
               </ul>
-                <Link to="/uslugi">
-              <a href={active.offerLink} className="modal__button">
-                Zobacz ofertę
-              </a>
+              <Link to="/uslugi">
+                <a href={active.offerLink} className="modal__button">
+                  Zobacz ofertę
+                </a>
               </Link>
             </div>
           </div>
