@@ -5,6 +5,7 @@ import Hero from "../components/Hero/Hero";
 import Benefits from "../components/Benefits/Benefits";
 import Projects from "../components/Projects/Projects.jsx";
 import ServicesSection from "../components/ServicesSection/ServicesSection.jsx";
+import AboutSection from "../components/AboutSection/AboutSection.jsx";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Benefits />
       <ServicesSection />
       <Projects />
+      <AboutSection />
     </>
   );
 }
