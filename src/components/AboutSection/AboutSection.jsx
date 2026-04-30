@@ -9,17 +9,21 @@ export default function AboutSection() {
           <span className="about-eyebrow">O mnie</span>
 
           <h2>Mateusz Czajkowski</h2>
-
-          <p>Inżynier elektroniki (Politechnika Lubelska)</p>
-
+          <img src="/images/about/mati-horizontal.jpg" alt="Mateusz Czajkowski" className="about-image-mobile" />
           <p>
             Od 5 lat projektuję i realizuję instalacje techniczne dla domów i firm. Specjalizuję się w systemach, które działają stabilnie i są
             przygotowane na dalszą rozbudowę. Zrealizowałem kilkadziesiąt instalacji – od sieci LAN i WiFi po systemy CCTV, alarmowe oraz rozdzielnie
             elektryczne.
           </p>
+          <h3>Inżynier elektroniki – Politechnika Lubelska </h3>
+          <p>
+            Wiedza inżynierska pozwala mi patrzeć na instalacje nie tylko jako wykonawca, ale jako projektant systemów. Rozumiem zależności,
+            obciążenia i zachowanie instalacji w czasie, dzięki czemu tworzę rozwiązania trwałe, logiczne i łatwe w serwisie.
+          </p>
 
           <p>
-            Unikam rozwiązań, które działają tylko „na papierze”. Instalacje projektuję tak, aby były stabilne, czytelne i łatwe w serwisie po latach.
+            Unikam rozwiązań, które działają tylko „na papierze”. Duży nacisk kładę na zrozumienie potrzeb klienta i projektuję instalacje z myślą o
+            codziennym korzystaniu, tak aby były stabilne, czytelne i łatwe w serwisie po latach.
           </p>
 
           <div className="about-points">

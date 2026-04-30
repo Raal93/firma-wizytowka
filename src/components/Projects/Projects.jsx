@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Projects.css";
 
+import domofona from "../../assets/images/domofona.jpg";
+import domofona1 from "../../assets/images/domofona1.jpg";
+import domofona2 from "../../assets/images/domofona2.jpg";
+import domofona3 from "../../assets/images/domofona3.jpg";
+import domofona4 from "../../assets/images/domofona4.jpg";
+
 import monitoring from "../../assets/images/monitoring.jpg";
 import monitoring1 from "../../assets/images/monitoring1.jpg";
 import monitoring2 from "../../assets/images/monitoring2.jpg";
@@ -31,6 +37,21 @@ import domofon from "../../assets/images/domofon.jpg";
 import domofon1 from "../../assets/images/domofon1.jpg";
 
 const projects = [
+  {
+    id: "domofon-alarm-dom",
+    img: domofona2,
+    gallery: [domofona, domofona1, domofona2, domofona3, domofona4],
+    tag: "Domofon / Alarm",
+    title: "Wideodomofon + system alarmowy – dom jednorodzinny",
+    desc: "Zrealizowany przez nas system kontroli dostępu i zabezpieczenia domu – komunikacja, podgląd i sterowanie wejściem z poziomu telefonu w jednym systemie.",
+    details: [
+      "Montaż wideodomofonu Dahua z czytnikiem RFID i szyfratorem, z bezdotykowym przyciskiem wyjścia.",
+      "System z dostępem zdalnym z telefonu, z możliwością dwustronnej komunikacji oraz sterowania bramą oraz furtką.",
+      "Zabezpieczenie domu systemem alarmowym Satel z czujnikami obecności oraz systemem bezprzewodowym zabezpieczającym wszystkie okna w domu z kontrolą otwarcia.",
+      "Przygotowanie pod integrację z systemem automatyki budynkowej Ampio.",
+    ],
+    offerLink: "/oferta/domofony-alarmy",
+  },
   {
     id: "cctv-dom",
     img: monitoring,
