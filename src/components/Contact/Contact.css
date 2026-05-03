@@ -11,9 +11,9 @@
 }
 
 .contact-hero__content {
-  max-width: 1180px;
+  /* max-width: 1180px; */
   margin: 0 auto;
-  padding: 70px 56px;
+  padding: 80px 8%;
   border-radius: 28px;
   background:
     radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.16), transparent 34%), linear-gradient(90deg, #020617 0%, #0f172a 55%, #020617 100%);
@@ -90,7 +90,6 @@
 }
 
 .contact-container {
-  max-width: 1180px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -101,7 +100,7 @@
 
 .contact-info,
 .contact-form {
-  padding: 56px;
+  padding: 80px 8%;
   border-radius: 28px;
   background:
     radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.16), transparent 34%), linear-gradient(90deg, #020617 0%, #0f172a 55%, #020617 100%);
