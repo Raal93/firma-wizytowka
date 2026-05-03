@@ -17,6 +17,7 @@ a {
 header {
   background: white;
   border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 32px;
 }
 
 nav {
@@ -50,8 +51,8 @@ main {
 
 section,
 main > div {
-  background: white;
-  padding: 40px;
+  background: #f6f7f8;
+  /* padding: 40px; */
   border-radius: 16px;
   margin-bottom: 32px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);

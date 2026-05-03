@@ -1,6 +1,7 @@
 .about-section {
   padding: 110px 24px;
-  background: linear-gradient(180deg, #020617 0%, #020617 100%);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.16), transparent 34%), linear-gradient(90deg, #020617 0%, #0f172a 55%, #020617 100%);
   color: #ffffff;
 }
 
