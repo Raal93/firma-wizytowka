@@ -1,14 +1,12 @@
 import { services } from "../data/services";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
 import { Link } from "react-router-dom";
+import ServicesSmartHome from "../components/ServicesSmartHome/ServicesSmartHome.jsx";
 
 export default function Services() {
   return (
     <div>
-      <h1>Usługi</h1>
-      {services.map((s) => (
-        <ServiceCard key={s.slug} service={s} />
-      ))}
+      <ServicesSmartHome />
       <Link to="/">Powrót na stronę główną</Link>
     </div>
   );

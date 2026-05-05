@@ -1,9 +1,7 @@
 import "./Hero.css";
-import hero from "../../assets/images/hero.jpg";
+import hero from "../../assets/images/hero1.jpg";
 import heroSm from "../../assets/images/heroSm.jpg";
 import { Link } from "react-router-dom";
-
-
 
 function Hero() {
   return (
@@ -19,8 +17,7 @@ function Hero() {
         </h1>
 
         <p className="hero__text">
-          Projektujemy i wykonujemy nowoczesne instalacje elektryczne oraz
-          systemy Smart Home, zapewniające komfort, bezpieczeństwo i oszczędność
+          Projektujemy i wykonujemy nowoczesne instalacje elektryczne oraz systemy Smart Home, zapewniające komfort, bezpieczeństwo i oszczędność
           energii.
         </p>
 
@@ -49,13 +46,13 @@ function Hero() {
             <p>Projekt, montaż, serwis</p>
           </div>
         </div>
-        
+
         <div className="hero__buttons">
           <Link to="/kontakt">
-          <a href="#kontakt" className="hero__button hero__button--primary">
-            Bezpłatna wycena
-          </a>
-</Link>
+            <a href="#kontakt" className="hero__button hero__button--primary">
+              Bezpłatna wycena
+            </a>
+          </Link>
           <a href="tel:+31612345678" className="hero__button hero__button--secondary">
             Zadzwoń: 530 128 138
           </a>
@@ -70,15 +67,8 @@ function Hero() {
 
       <div className="hero__image">
         <picture>
-          <source
-            media="(max-width: 1000px)"
-            srcSet={heroSm}
-          />
-        <img
-          src={hero}
-          alt="Rozdzielnia elektryczna smart home"
-          className="hero__image"
-        />
+          <source media="(max-width: 1000px)" srcSet={heroSm} />
+          <img src={hero} alt="Rozdzielnia elektryczna smart home" className="hero__image" />
         </picture>
       </div>
     </section>
