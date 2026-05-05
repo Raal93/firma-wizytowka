@@ -1,4 +1,5 @@
 import "./Benefits.css";
+import { Link } from "react-router-dom";
 
 function Benefits() {
   const benefits = [
@@ -57,9 +58,9 @@ function Benefits() {
 
         <p>Smart Home integruje urządzenia i instalacje w domu, tworząc wygodny, nowoczesny i łatwy w obsłudze system dopasowany do domowników.</p>
 
-        <a href="/uslugi" className="benefits__more">
+        <Link to="/uslugi" className="benefits__more">
           Dowiedz się więcej o inteligentnym domu →
-        </a>
+        </Link>
       </div>
 
       {/* <div className="benefits__cta">
