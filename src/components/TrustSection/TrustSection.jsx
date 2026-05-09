@@ -38,7 +38,7 @@ export default function TrustSection() {
 
             <div className="trust-impact-bottom">
               <Link to="/kontakt" className="trust-button">
-                Porozmawiajmy o Twojej instalacji
+                Porozmawiajmy o Twoim projekcie
               </Link>
 
               <p>Projekt • wykonanie • uruchomienie • dalsza rozbudowa</p>

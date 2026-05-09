@@ -1,30 +1,30 @@
 import { Link } from "react-router-dom";
 import "./SmartInstallationPreview.css";
 
-const smartFeatures = [
+const smartBenefits = [
   {
-    title: "Oszczędność energii",
-    text: "Sterowanie ogrzewaniem, klimatyzacją, rekuperacją i roletami pomaga lepiej zarządzać temperaturą oraz ograniczać straty energii.",
+    title: "Niższe zużycie energii",
+    text: "Ogrzewanie, klimatyzacja, rekuperacja i rolety mogą pracować razem, aby ograniczać straty ciepła i lepiej wykorzystywać energię w domu.",
   },
   {
-    title: "Zarządzanie energią",
-    text: "Integracja PV, magazynu energii, ładowarki samochodu elektrycznego i taryf dynamicznych pozwala świadomie kontrolować zużycie energii.",
+    title: "Większy komfort na co dzień",
+    text: "Światło, rolety, temperatura, audio i sceny domowe można dopasować do rytmu dnia, obecności domowników oraz konkretnych sytuacji.",
   },
   {
-    title: "Oświetlenie",
-    text: "Sceny świetlne, tryb nocny i automatyzacje dopasowane do obecności domowników zwiększają wygodę codziennego użytkowania.",
+    title: "Więcej bezpieczeństwa",
+    text: "Alarm, monitoring, wideodomofon, czujniki i powiadomienia tworzą spójny system, który pomaga szybciej reagować na zdarzenia.",
   },
   {
-    title: "Bezpieczeństwo",
-    text: "Alarm, monitoring, wideodomofon i czujniki mogą działać niezależnie, ale być wygodnie zintegrowane w jednej aplikacji.",
+    title: "Jedna wygodna obsługa",
+    text: "Zamiast wielu osobnych aplikacji i pilotów, dom może być sterowany z panelu, telefonu, przycisków ściennych lub automatycznych scen.",
   },
   {
-    title: "Multiroom Audio",
-    text: "Nagłośnienie podzielone na strefy pozwala sterować muzyką z panelu, telefonu lub ulubionych serwisów streamingowych.",
+    title: "Kontrola nad energią",
+    text: "Integracja PV, magazynu energii, ładowarki EV i taryf dynamicznych pozwala świadomie zarządzać produkcją oraz zużyciem energii.",
   },
   {
-    title: "Elastyczność",
-    text: "Dobrze zaprojektowany system może być rozbudowywany i dopasowywany do zmieniających się potrzeb domowników.",
+    title: "Gotowość na rozbudowę",
+    text: "Dobrze zaprojektowana instalacja pozwala łatwiej dodawać kolejne funkcje bez chaotycznych przeróbek i przypadkowych rozwiązań.",
   },
 ];
 
@@ -33,16 +33,19 @@ export default function SmartInstallationPreview() {
     <section className="smart-preview">
       <div className="smart-preview__background" />
 
+      <div className="smart-preview__glow smart-preview__glow--one" />
+      <div className="smart-preview__glow smart-preview__glow--two" />
+
       <div className="smart-preview__inner">
         <div className="smart-preview__top">
           <div className="smart-preview__content">
-            <span className="smart-preview__label">INTELIGENTNA INSTALACJA</span>
+            <span className="smart-preview__label">KORZYŚCI SMART HOME</span>
 
-            <h2>Smart Home to system naczyń połączonych</h2>
+            <h2>Co zyskujesz dzięki inteligentnej instalacji?</h2>
 
             <p>
-              Inteligentna instalacja nie jest zbiorem osobnych urządzeń. To przemyślany ekosystem, w którym energia, komfort, bezpieczeństwo,
-              oświetlenie, audio i codzienne scenariusze domu działają razem.
+              Smart home to nie tylko sterowanie światłem z telefonu. To instalacja, która łączy komfort, bezpieczeństwo, energię i codzienne
+              scenariusze domu w jeden spójny system.
             </p>
           </div>
 
@@ -54,31 +57,34 @@ export default function SmartInstallationPreview() {
 
             <div className="smart-preview__orbit smart-preview__orbit--one" />
             <div className="smart-preview__orbit smart-preview__orbit--two" />
+            <div className="smart-preview__orbit smart-preview__orbit--three" />
 
+            <span className="smart-preview__node smart-preview__node--comfort">Komfort</span>
             <span className="smart-preview__node smart-preview__node--energy">Energia</span>
-            <span className="smart-preview__node smart-preview__node--light">Światło</span>
-            <span className="smart-preview__node smart-preview__node--security">Alarm</span>
-            <span className="smart-preview__node smart-preview__node--audio">Audio</span>
+            <span className="smart-preview__node smart-preview__node--security">Bezpieczeństwo</span>
+            <span className="smart-preview__node smart-preview__node--control">Sterowanie</span>
           </div>
         </div>
 
         <div className="smart-preview__grid">
-          {smartFeatures.map((feature, index) => (
-            <article className="smart-preview__card" key={feature.title}>
+          {smartBenefits.map((benefit, index) => (
+            <article className="smart-preview__card" key={benefit.title}>
               <span className="smart-preview__number">{String(index + 1).padStart(2, "0")}</span>
 
-              <h3>{feature.title}</h3>
+              <h3>{benefit.title}</h3>
 
-              <p>{feature.text}</p>
+              <p>{benefit.text}</p>
             </article>
           ))}
         </div>
 
         <div className="smart-preview__bottom">
-          <p>System może reagować na temperaturę, porę dnia, obecność domowników, nasłonecznienie, stan alarmu czy aktualne zużycie energii.</p>
+          <p>
+            System może reagować na temperaturę, porę dnia, obecność domowników, nasłonecznienie, stan alarmu, zużycie energii lub tryb pracy domu.
+          </p>
 
           <Link to="/smart-home-krakow" className="smart-preview__link">
-            Zobacz Więcej o Smart Home Kraków →
+            Zobacz więcej o Smart Home Kraków →
           </Link>
         </div>
       </div>

@@ -129,7 +129,7 @@ export default function ServicesSection() {
             <div className="services-modules-intro">
               <span>Elementy systemu</span>
 
-              <h3>Instalacje, które mogą pracować razem</h3>
+              <h3>Systemy, które łączymy w jedną instalację</h3>
 
               <p>Każdy system może działać samodzielnie. Największą wartość daje jednak ich przemyślana integracja z automatyką budynkową.</p>
             </div>

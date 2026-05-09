@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const navLinks = [
-  { label: "Usługi", to: "/uslugi" },
+  { label: "Start", to: "/" },
   { label: "Smart Home Kraków", to: "/smart-home-krakow" },
   { label: "Realizacje", to: "/#realizacje", isAnchor: true },
   { label: "Kontakt", to: "/kontakt" },
@@ -37,9 +37,11 @@ export default function Footer() {
           <span>Kontakt</span>
 
           <a href="tel:+48530128138">530 128 138</a>
-          <a href="mailto:smartinstalacje@firma.pl">smartinstalacje@firma.pl</a>
+          <a href="mailto:czajkowskismart@gmail.com">czajkowskismart@gmail.com</a>
 
-          <p>Kraków i okolice</p>
+          <p>
+            <Link to="/kontakt">Kraków i okolice</Link>
+          </p>
         </div>
       </div>
 
