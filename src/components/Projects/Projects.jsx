@@ -41,95 +41,86 @@ const projects = [
     id: "domofon-alarm-dom",
     img: domofona2,
     gallery: [domofona, domofona1, domofona2, domofona3, domofona4],
-    tag: "Domofon / Alarm",
-    title: "Wideodomofon + system alarmowy – dom jednorodzinny",
-    desc: "Zrealizowany przez nas system kontroli dostępu i zabezpieczenia domu – komunikacja, podgląd i sterowanie wejściem z poziomu telefonu w jednym systemie.",
+    tag: "Dostęp + bezpieczeństwo",
+    title: "Wideodomofon i alarm jako element inteligentnego domu",
+    cardDesc: "Kontrola wejścia, alarm i dostęp z telefonu.",
+    desc: "Realizacja pokazuje, jak system wejścia i zabezpieczenia domu może stać się częścią szerszej inteligentnej instalacji — z kontrolą dostępu, komunikacją, podglądem i możliwością dalszej integracji z automatyką budynkową.",
     details: [
-      "Montaż wideodomofonu Dahua z czytnikiem RFID i szyfratorem, z bezdotykowym przyciskiem wyjścia.",
-      "System z dostępem zdalnym z telefonu, z możliwością dwustronnej komunikacji oraz sterowania bramą oraz furtką.",
-      "Zabezpieczenie domu systemem alarmowym Satel z czujnikami obecności oraz systemem bezprzewodowym zabezpieczającym wszystkie okna w domu z kontrolą otwarcia.",
+      "Montaż wideodomofonu Dahua z czytnikiem RFID, szyfratorem i bezdotykowym przyciskiem wyjścia.",
+      "Dostęp zdalny z telefonu, dwustronna komunikacja oraz sterowanie bramą i furtką.",
+      "System alarmowy Satel z czujnikami obecności oraz zabezpieczeniem okien.",
       "Przygotowanie pod integrację z systemem automatyki budynkowej Ampio.",
     ],
-    offerLink: "/oferta/domofony-alarmy",
+    offerLink: "/uslugi",
   },
   {
     id: "cctv-dom",
     img: monitoring,
     gallery: [monitoring, monitoring1],
-    tag: "Monitoring",
-    title: "Monitoring CCTV – dom jednorodzinny",
-    desc: "Zrealizowany przez nas system monitoringu posesji – podgląd na żywo, zapis zdarzeń i kontrola obrazu z poziomu telefonu, z dodatkowym zabezpieczeniem pracy systemu po zaniku zasilania.",
+    tag: "Bezpieczeństwo",
+    title: "Monitoring CCTV jako moduł bezpieczeństwa domu",
+    cardDesc: "Podgląd posesji i kontrola zdarzeń.",
+    desc: "Monitoring CCTV nie musi być osobnym systemem oderwanym od reszty instalacji. Może stanowić jeden z modułów bezpieczeństwa domu — z podglądem na żywo, zapisem zdarzeń i możliwością powiązania z alarmem lub automatyką.",
     details: [
-      "Dobór lokalizacji kamer tak, aby skutecznie obejmowały kluczowe strefy posesji i wejścia do budynku.",
-      "Prowadzenie okablowania oraz przygotowanie instalacji pod stabilną pracę systemu.",
-      "Montaż i konfiguracja rejestratora wraz z ustawieniem nagrywania, podglądu oraz dostępu zdalnego.",
-      "Uruchomienie podglądu na telefonie z możliwością bieżącej kontroli obrazu z kamer.",
-      "Zabezpieczenie systemu zasilaczem UPS, dzięki czemu monitoring działa bezprzerwowo jeszcze długo po zaniku zasilania.",
+      "Dobór lokalizacji kamer dla kluczowych stref posesji i wejść do budynku.",
+      "Prowadzenie okablowania oraz przygotowanie stabilnej infrastruktury pod CCTV.",
+      "Konfiguracja rejestratora, nagrywania, podglądu i dostępu zdalnego.",
+      "Uruchomienie podglądu na telefonie.",
+      "Zabezpieczenie systemu zasilaczem UPS na wypadek zaniku zasilania.",
     ],
-    offerLink: "/oferta/cctv",
+    offerLink: "/uslugi",
   },
   {
     id: "cctv-modernizacja-firma",
     img: sieci,
     gallery: [sieci],
-    tag: "Monitoring",
-    title: "Modernizacja systemu CCTV – firma produkcyjna",
-    desc: "Modernizacja istniejącego systemu monitoringu – optymalizacja działania, rozbudowa oraz dostosowanie instalacji do aktualnych potrzeb i infrastruktury klienta.",
+    tag: "Infrastruktura",
+    title: "Modernizacja CCTV i sieci monitoringu",
+    cardDesc: "Stabilna infrastruktura pod systemy bezpieczeństwa.",
+    desc: "Ta realizacja pokazuje techniczne podejście do systemów niskoprądowych: porządek w infrastrukturze, stabilną sieć dla monitoringu i przygotowanie systemu pod dalszą rozbudowę.",
     details: [
-      "Przegląd istniejącego systemu kamer IP oraz analogowych wraz z oceną stanu technicznego i możliwości dalszej rozbudowy.",
-      "Naprawa niedziałających kamer, a w przypadku braku możliwości – wymiana na nowe zgodnie z założeniami klienta.",
-      "Rozbudowa części analogowej w celu maksymalnego wykorzystania istniejącej infrastruktury.",
-      "Rozbudowa części IP systemu wraz z wydzieleniem dedykowanej sieci dla monitoringu CCTV.",
-      "Dostosowanie całego systemu do aktualnej infrastruktury klienta z zachowaniem stabilności i spójności działania.",
+      "Przegląd istniejących kamer IP i analogowych oraz ocena możliwości rozbudowy.",
+      "Naprawa niedziałających kamer lub wymiana na nowe zgodnie z założeniami klienta.",
+      "Rozbudowa części analogowej z wykorzystaniem istniejącej infrastruktury.",
+      "Rozbudowa części IP wraz z wydzieleniem dedykowanej sieci dla CCTV.",
+      "Dostosowanie systemu do aktualnej infrastruktury klienta.",
     ],
-    offerLink: "/oferta/sieci",
+    offerLink: "/uslugi",
   },
   {
     id: "ppoz-modernizacja-serwerownia",
     img: alarm,
     gallery: [alarm, alarm1, alarm2],
-    tag: "Alarm / PPOŻ",
-    title: "Modernizacja systemu wczesnego wykrywania pożaru – serwerownia",
-    desc: "Modernizacja systemu zabezpieczenia serwerowni – zwiększenie niezawodności, szybsza detekcja zagrożeń oraz integracja z systemem powiadamiania.",
+    tag: "Bezpieczeństwo techniczne",
+    title: "System wczesnego wykrywania zagrożeń",
+    cardDesc: "Detekcja, powiadamianie i szybka reakcja.",
+    desc: "Systemy bezpieczeństwa technicznego powinny działać niezależnie i niezawodnie. W inteligentnym budynku mogą dodatkowo przekazywać informacje do automatyki, powiadomień lub scen awaryjnych.",
     details: [
-      "Przegląd istniejącego systemu wczesnego wykrywania pożaru wraz z oceną stanu technicznego instalacji.",
-      "Wymiana niesprawnych czujników oraz rozbudowa instalacji w celu poprawy skuteczności detekcji.",
-      "Wymiana uszkodzonej centrali alarmowej Satel CA-64 na centralę Satel Integra 128.",
-      "Konfiguracja systemu oraz dostosowanie do aktualnych wymagań bezpieczeństwa obiektu.",
-      "Podłączenie systemu do sieci GSM oraz lokalnej grupy interwencyjnej w celu szybkiej reakcji na zdarzenia.",
+      "Przegląd istniejącego systemu wczesnego wykrywania pożaru.",
+      "Wymiana niesprawnych czujników oraz rozbudowa instalacji.",
+      "Wymiana uszkodzonej centrali Satel CA-64 na Satel Integra 128.",
+      "Konfiguracja systemu pod wymagania bezpieczeństwa obiektu.",
+      "Podłączenie systemu do sieci GSM oraz lokalnej grupy interwencyjnej.",
     ],
-    offerLink: "/oferta/alarm",
+    offerLink: "/uslugi",
   },
   {
     id: "rozdzielnia-firma-modernizacja",
     img: rozdzielnia3,
     gallery: [rozdzielnia3],
-    tag: "Elektryka",
-    title: "Przeniesienie i modernizacja rozdzielni – zakład produkcyjny",
-    desc: "Zrealizowane przez nas przeniesienie i modernizacja rozdzielni elektrycznej – uporządkowanie instalacji oraz dostosowanie jej do aktualnych potrzeb zakładu.",
+    tag: "Fundament instalacji",
+    title: "Rozdzielnia jako baza pod automatykę",
+    cardDesc: "Porządek, opis i gotowość do rozbudowy.",
+    desc: "Dobrze wykonana i opisana rozdzielnia to fundament nowoczesnej instalacji. Ułatwia serwis, rozbudowę oraz późniejszą integrację z automatyką budynkową, pomiarami energii i systemami sterowania.",
     details: [
-      "Przeniesienie rozdzielni elektrycznej do nowej lokalizacji z zachowaniem ciągłości i bezpieczeństwa instalacji.",
-      "Modernizacja układu rozdzielni oraz uporządkowanie istniejących obwodów.",
-      "Oznaczenie obwodów w celu poprawy czytelności oraz ułatwienia przyszłego serwisu.",
-      "Dostosowanie rozdzielni do aktualnych wymagań eksploatacyjnych zakładu produkcyjnego.",
+      "Przeniesienie rozdzielni elektrycznej do nowej lokalizacji.",
+      "Modernizacja układu rozdzielni oraz uporządkowanie obwodów.",
+      "Oznaczenie obwodów dla łatwiejszego serwisu i diagnostyki.",
+      "Dostosowanie rozdzielni do aktualnych wymagań eksploatacyjnych.",
+      "Przygotowanie instalacji pod przyszłą rozbudowę i integrację.",
     ],
-    offerLink: "/oferta/elektryka",
+    offerLink: "/uslugi",
   },
-  // {
-  //   id: "loxone-ready",
-  //   img: smart,
-  //   gallery: [smart, smart1, smart2],
-  //   tag: "Smart Home",
-  //   title: "Instalacja przygotowana pod Loxone",
-  //   desc: "Okablowanie i infrastruktura gotowa pod inteligentne sterowanie domem.",
-  //   details: [
-  //     "Okablowanie pod automatykę",
-  //     "Przygotowanie pod sterowanie światłem i roletami",
-  //     "Integracja z instalacją elektryczną",
-  //     "Możliwość rozbudowy systemu",
-  //   ],
-  //   offerLink: "/oferta/smart-home",
-  // },
 ];
 
 function Projects() {
@@ -180,15 +171,17 @@ function Projects() {
     <section className="projects">
       <div className="projects__header">
         <p className="projects__label">REALIZACJE</p>
-        <h2>Zobacz, jak wygląda dobrze wykonana instalacja</h2>
-        <p>Kilka przykładów prac z zakresu instalacji elektrycznych, niskoprądowych, sieciowych i automatyki budynkowej.</p>
+        <h2>Realizacje, które budują inteligentną instalację</h2>
+        <p>Przykłady prac z zakresu bezpieczeństwa, dostępu, sieci i elektryki — czyli elementów, które mogą tworzyć spójny system Smart Home.</p>
       </div>
       <div className="projects__grid">
         {projects.map((p) => (
           <div className="projects__card" key={p.id} onClick={() => openModal(p)}>
             <img src={p.img} alt={p.title} />
             <div className="projects__overlay">
+              <span>{p.tag}</span>
               <h3>{p.title}</h3>
+              <p>{p.cardDesc}</p>
             </div>
           </div>
         ))}
@@ -236,10 +229,8 @@ function Projects() {
                   <li key={i}>{d}</li>
                 ))}
               </ul>
-              <Link to="/uslugi">
-                <a href={active.offerLink} className="modal__button">
-                  Zobacz ofertę
-                </a>
+              <Link to={active.offerLink} className="modal__button">
+                Zobacz ofertę
               </Link>
             </div>
           </div>

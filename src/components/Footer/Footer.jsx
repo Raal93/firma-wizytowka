@@ -1,21 +1,52 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
+
+const navLinks = [
+  { label: "Usługi", to: "/uslugi" },
+  { label: "Smart Home Kraków", to: "/smart-home-krakow" },
+  { label: "Realizacje", to: "/#realizacje", isAnchor: true },
+  { label: "Kontakt", to: "/kontakt" },
+];
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-left">
+        <div className="footer-brand">
           <strong>Smart Instalacje</strong>
-          <p>Instalacje elektryczne i automatyka</p>
+          <p>Inteligentne instalacje, automatyka budynkowa i systemy bezpieczeństwa dla nowoczesnych domów.</p>
         </div>
 
-        <div className="footer-right">
-          <p>tel: +48 000 000 000</p>
-          <p>email: smartinstalacje@firma.pl</p>
+        <nav className="footer-nav" aria-label="Nawigacja w stopce">
+          <span>Nawigacja</span>
+
+          {navLinks.map((link) =>
+            link.isAnchor ? (
+              <a href={link.to} key={link.label}>
+                {link.label}
+              </a>
+            ) : (
+              <Link to={link.to} key={link.label}>
+                {link.label}
+              </Link>
+            ),
+          )}
+        </nav>
+
+        <div className="footer-contact">
+          <span>Kontakt</span>
+
+          <a href="tel:+48530128138">530 128 138</a>
+          <a href="mailto:smartinstalacje@firma.pl">smartinstalacje@firma.pl</a>
+
+          <p>Kraków i okolice</p>
         </div>
       </div>
 
-      <div className="footer-bottom">© {new Date().getFullYear()} Smart Instalacje</div>
+      <div className="footer-bottom">
+        <span>© {new Date().getFullYear()} Smart Instalacje</span>
+        <span>Smart Home</span>
+      </div>
     </footer>
   );
 }

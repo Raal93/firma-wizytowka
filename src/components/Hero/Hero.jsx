@@ -2,12 +2,13 @@ import "./Hero.css";
 import hero from "../../assets/images/hero1.jpg";
 import heroSm from "../../assets/images/heroSm.jpg";
 import { Link } from "react-router-dom";
+import { House, ShieldCheck, Zap, Settings2 } from "lucide-react";
 
 function Hero() {
   return (
     <section className="hero">
       <div className="hero__content">
-        <p className="hero__label">SMART INSTALLATIONS</p>
+        <p className="hero__label">SMART INSTALACJE</p>
         <p className="hero__name"> Mateusz Czajkowski</p>
 
         <h1>
@@ -17,51 +18,59 @@ function Hero() {
         </h1>
 
         <p className="hero__text">
-          Projektujemy i wykonujemy nowoczesne instalacje elektryczne oraz systemy Smart Home, zapewniające komfort, bezpieczeństwo i oszczędność
-          energii.
+          Projektujemy i wdrażamy systemy Smart Home oraz automatykę budynkową, które integrują oświetlenie, ogrzewanie, rolety, bezpieczeństwo i
+          zarządzanie energią w jeden spójny ekosystem.
         </p>
 
         <div className="hero__tiles">
           <div className="hero__tile">
-            <div className="hero__icon">⌂</div>
+            <div className="hero__icon">
+              <House size={30} strokeWidth={1.8} />
+            </div>
             <h3>Smart Home</h3>
-            <p>Loxone</p>
+            <p>Loxone, automatyka, sceny</p>
           </div>
 
           <div className="hero__tile">
-            <div className="hero__icon">🛡</div>
+            <div className="hero__icon">
+              <ShieldCheck size={30} strokeWidth={1.8} />
+            </div>
             <h3>Bezpieczeństwo</h3>
             <p>Alarm, monitoring</p>
           </div>
 
           <div className="hero__tile">
-            <div className="hero__icon">♻</div>
+            <div className="hero__icon">
+              <Zap size={30} strokeWidth={1.8} />
+            </div>
             <h3>Oszczędność energii</h3>
-            <p>Ogrzewanie i światło</p>
+            <p>Ogrzewanie, rolety, oświetlenie</p>
           </div>
 
           <div className="hero__tile">
-            <div className="hero__icon">⚙</div>
+            <div className="hero__icon">
+              <Settings2 size={30} strokeWidth={1.8} />
+            </div>
             <h3>Kompleksowa obsługa</h3>
             <p>Projekt, montaż, serwis</p>
           </div>
         </div>
 
         <div className="hero__buttons">
-          <Link to="/kontakt">
-            <a href="#kontakt" className="hero__button hero__button--primary">
-              Bezpłatna wycena
-            </a>
+          <Link to="/kontakt" className="hero__button hero__button--primary">
+            Bezpłatna wycena
           </Link>
-          <a href="tel:+31612345678" className="hero__button hero__button--secondary">
+          <a href="tel:+48530128138" className="hero__button hero__button--secondary">
             Zadzwoń: 530 128 138
           </a>
         </div>
 
         <div className="hero__trust">
-          <span>Lublin / Kraków / okolice</span>
-          <span>Szybka realizacja</span>
-          <span>Gwarancja jakości</span>
+          <span>
+            <Link to="/kontakt">Kraków i okolice</Link>
+          </span>
+          <span>Terminowa realizacja</span>
+          <span>Estetyczne i trwałe wykonanie</span>
         </div>
       </div>
 
