@@ -5,7 +5,7 @@ const trustCards = [
   {
     label: "Warsztat techniczny",
     title: "Nie tylko montaż, ale zrozumienie systemu",
-    text: "Za realizację odpowiada Mateusz Czajkowski — magister inżynier elektrotechniki, absolwent Akademii Górniczo-Hutniczej w Krakowie, z doświadczeniem w elektronice embedded. Dzięki temu masz pewność, że Twoją instalację projektuje specjalista z solidnym przygotowaniem technicznym rozumiejący nie tylko montaż, ale także działanie systemu jako całości.",
+    text: "Za realizację odpowiada Mateusz Czajkowski — magister inżynier elektrotechniki, absolwent Akademii Górniczo-Hutniczej w Krakowie, z doświadczeniem w elektronice embedded. Dzięki temu masz pewność, że Twoją instalację projektuje specjalista z solidnym przygotowaniem technicznym rozumiejący nie tylko montaż, ale także fundamenty działania systemu.",
   },
   {
     label: "Dopasowanie i prostota",
