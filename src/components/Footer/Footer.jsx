@@ -4,7 +4,7 @@ import "./Footer.css";
 const navLinks = [
   { label: "Start", to: "/" },
   { label: "Smart Home Kraków", to: "/smart-home-krakow" },
-  { label: "Realizacje", to: "/#realizacje", isAnchor: true },
+  { label: "Realizacje", to: "/realizacje" },
   { label: "Kontakt", to: "/kontakt" },
 ];
 
