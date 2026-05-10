@@ -5,69 +5,69 @@ import "./SmartHomeKrakow.css";
 
 const smartAreas = [
   {
-    eyebrow: "Komfort cieplny",
-    title: "Ogrzewanie, chłodzenie i rolety",
-    text: "Ogrzewanie, klimatyzacja, rekuperacja, rolety i czujniki temperatury warto zaplanować jako jeden obszar komfortu. Dzięki temu dom może reagować na temperaturę, porę dnia i nasłonecznienie bez ciągłego ręcznego sterowania.",
+    eyebrow: "Energia i ogrzewanie",
+    title: "Oszczędność energii",
+    text: "Inteligentny dom zaczyna mieć realny sens wtedy, gdy łączy źródło ciepła, ogrzewanie podłogowe, zawory, klimatyzację, rekuperację, rolety i czujniki temperatury w jeden spójny system. Dom nie działa wtedy przypadkowo — reaguje na porę dnia, temperaturę, nasłonecznienie i obecność domowników.",
     points: [
-      "sterowanie ogrzewaniem podłogowym i zaworami",
-      "współpraca z klimatyzacją lub pompą ciepła",
-      "wykorzystanie rolet do ograniczania przegrzewania",
-      "automatyczne sceny dla dnia, nocy i nieobecności",
+      "integracja pompy ciepła, pieca lub innego źródła ciepła",
+      "sterowanie zaworami ogrzewania i klimatyzacją",
+      "wykorzystanie rolet i żaluzji do zarządzania zyskami ciepła ze słońca",
+      "automatyczne dogrzewanie lub ograniczanie przegrzewania pomieszczeń",
     ],
   },
   {
-    eyebrow: "Energia",
-    title: "PV, magazyn energii i ładowarka EV",
-    text: "Przy fotowoltaice, magazynie energii, ładowarce samochodu elektrycznego lub taryfie dynamicznej automatyka może pomóc lepiej wykorzystać energię produkowaną i zużywaną w budynku.",
+    eyebrow: "PV, magazyn, EV",
+    title: "Zarządzanie energią",
+    text: "Jeżeli planujesz fotowoltaikę, magazyn energii, samochód elektryczny albo taryfę dynamiczną, automatyka budynkowa pozwala wykorzystać energię wtedy, kiedy jest to najbardziej opłacalne. System może koordynować pracę falownika, ładowarki, magazynu, pompy ciepła, klimatyzacji i innych odbiorników.",
     points: [
-      "monitorowanie produkcji i zużycia energii",
-      "współpraca z magazynem energii",
-      "sterowanie wybranymi odbiornikami",
-      "przygotowanie domu pod przyszłą rozbudowę",
+      "integracja PV, magazynu energii i ładowarki EV",
+      "współpraca z taryfą dynamiczną",
+      "optymalizacja zużycia energii w budynku",
+      "dostęp do zarządzania energią z jednej aplikacji",
     ],
   },
   {
     eyebrow: "Światło i sceny",
-    title: "Oświetlenie dopasowane do życia",
-    text: "Dobrze zaprojektowane oświetlenie nie polega na mnożeniu przełączników. Chodzi o wygodne sceny: poranek, wieczór, gotowanie, oglądanie filmu, nocne przejście korytarzem albo wyjście z domu.",
+    title: "Oświetlenie, które pracuje w tle",
+    text: "Dobrze zaprojektowane oświetlenie nie polega na tym, że masz więcej przycisków. Chodzi o to, żeby dom rozumiał kontekst. Inaczej działa kuchnia rano, inaczej salon wieczorem, a jeszcze inaczej korytarz w nocy, kiedy ktoś idzie po wodę.",
     points: [
-      "sceny świetlne dla różnych trybów dnia",
-      "sterowanie z przycisków, panelu i aplikacji",
-      "delikatne światło nocne w ciągach komunikacyjnych",
+      "sceny świetlne dopasowane do trybu życia",
+      "mniej przełączników na ścianach",
+      "delikatne podświetlenie schodów i korytarzy w nocy",
+      "łatwa zmiana logiki działania po czasie użytkowania",
+    ],
+  },
+  {
+    eyebrow: "Strefy audio",
+    title: "Multiroom Audio",
+    text: "System nagłośnienia może być częścią inteligentnego domu. Salon, kuchnia, łazienka, taras czy sypialnia mogą działać jako osobne strefy. Każdy domownik może korzystać z własnej przestrzeni audio, playlist i ulubionych serwisów streamingowych.",
+    points: [
+      "podział domu na niezależne strefy audio",
+      "sterowanie z panelu, telefonu lub aplikacji",
+      "obsługa playlist i serwisów takich jak Spotify",
+      "indywidualny dostęp dla domowników",
+    ],
+  },
+  {
+    eyebrow: "Alarm, CCTV, czujniki",
+    title: "Bezpieczeństwo",
+    text: "Automatyka nie zastępuje profesjonalnego alarmu ani monitoringu. Te systemy powinny być niezależne i dedykowane do ochrony budynku. Rolą smart home jest ich wygodna integracja — tak, aby alarm, kamery, wideodomofon, brama, furtka i powiadomienia działały razem.",
+    points: [
+      "niezależny system alarmowy",
+      "integracja CCTV, wideodomofonu, bramy i furtki",
+      "czujniki zalania, dymu i gazów usypiających",
+      "zarządzanie bezpieczeństwem z jednej aplikacji lub panelu",
+    ],
+  },
+  {
+    eyebrow: "Komfort codzienny",
+    title: "Dom dopasowany do domowników",
+    text: "Największą zaletą automatyki jest elastyczność. Część rozwiązań dopiero w praktyce pokazuje, czy działa idealnie. Dobrze wykonany system można później dopracować: zmienić sceny, harmonogramy, logikę przycisków, zachowanie rolet, światła, ogrzewania czy powiadomień.",
+    points: [
+      "system może zmieniać się razem z domownikami",
       "możliwość korekt po realnym użytkowaniu",
-    ],
-  },
-  {
-    eyebrow: "Bezpieczeństwo",
-    title: "Alarm, CCTV, wideodomofon i czujniki",
-    text: "Alarm, monitoring i wideodomofon powinny pozostać stabilnymi, dedykowanymi systemami. Automatyka może jednak ułatwić ich codzienną obsługę: powiadomienia, podgląd, furtka, brama i tryby obecności mogą być dostępne z jednego miejsca.",
-    points: [
-      "integracja alarmu z wybranymi scenami",
-      "podgląd kamer i obsługa wideodomofonu",
-      "czujniki zalania, dymu i innych zdarzeń",
-      "wygodna obsługa bramy oraz furtki",
-    ],
-  },
-  {
-    eyebrow: "Sterowanie",
-    title: "Panele, aplikacja i przyciski",
-    text: "Dobry Smart Home nie powinien zmuszać domowników do ciągłego otwierania aplikacji. Najważniejsze funkcje warto przenieść na przyciski, panele i automatyczne sceny.",
-    points: [
-      "czytelne przyciski ścienne",
-      "panel centralny w ważnym miejscu domu",
-      "aplikacja do konfiguracji i kontroli",
-      "prosta obsługa dla wszystkich domowników",
-    ],
-  },
-  {
-    eyebrow: "Rozbudowa",
-    title: "Instalacja przygotowana na przyszłość",
-    text: "Najlepszy moment na decyzje techniczne jest przed wykonaniem instalacji. Wtedy można przewidzieć przewody, miejsce w rozdzielni, zasilanie urządzeń i możliwości późniejszej rozbudowy.",
-    points: [
-      "planowanie okablowania przed tynkami",
-      "rezerwa w rozdzielni i trasach kablowych",
-      "możliwość etapowania inwestycji",
-      "mniej przeróbek w przyszłości",
+      "personalizowana aplikacja",
+      "mniej chaosu, więcej kontroli",
     ],
   },
 ];
@@ -108,7 +108,7 @@ function SmartHero() {
     <section className="smart-hero">
       <div className="smart-container smart-hero__grid">
         <div className="smart-hero__content">
-          <span className="smart-eyebrow">Smart Home Kraków i okolice</span>
+          <span className="smart-eyebrow">Smart Home Kraków / okolice</span>
 
           <h1>Automatyka domu zaplanowana od instalacji po codzienne sceny.</h1>
 
