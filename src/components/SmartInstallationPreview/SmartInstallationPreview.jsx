@@ -11,7 +11,7 @@ const smartBenefits = [
     text: "Światło, rolety, temperatura, audio i sceny domowe można dopasować do rytmu dnia, obecności domowników oraz konkretnych sytuacji.",
   },
   {
-    title: "Więcej bezpieczeństwa",
+    title: "Bezpieczeństwo",
     text: "Alarm, monitoring, wideodomofon, czujniki i powiadomienia tworzą spójny system, który pomaga szybciej reagować na zdarzenia.",
   },
   {
@@ -41,11 +41,11 @@ export default function SmartInstallationPreview() {
           <div className="smart-preview__content">
             <span className="smart-preview__label">KORZYŚCI SMART HOME</span>
 
-            <h2>Co zyskujesz dzięki inteligentnej instalacji?</h2>
+            <h2>Co zmienia dobrze zaprojektowany Smart Home?</h2>
 
             <p>
-              Smart home to nie tylko sterowanie światłem z telefonu. To instalacja, która łączy komfort, bezpieczeństwo, energię i codzienne
-              scenariusze domu w jeden spójny system.
+              Największa wartość automatyki nie polega na samej aplikacji. Chodzi o dom, który działa przewidywalnie, ogranicza codzienne klikanie i
+              pozwala łatwo dopasować funkcje do sposobu życia.
             </p>
           </div>
 

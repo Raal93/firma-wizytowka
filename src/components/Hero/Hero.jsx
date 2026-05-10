@@ -46,12 +46,12 @@ function Hero() {
         <p className="hero__name">Mateusz Czajkowski</p>
 
         <h1>
-          Smart Home i instalacje, które pracują <span>jako jeden system.</span>
+          Smart Home - instalacje, które pracują <span>jako jeden system.</span>
         </h1>
 
         <p className="hero__text">
-          Projektujemy i wykonujemy inteligentne instalacje domowe oparte o automatykę Loxone, integrując oświetlenie, ogrzewanie, rolety,
-          bezpieczeństwo, sieć i zarządzanie energią.
+          Projektujemy i wykonujemy automatykę Loxone oraz instalacje techniczne dla nowoczesnych domów — od koncepcji, przez okablowanie i montaż, po
+          uruchomienie systemu.
         </p>
 
         <div className="hero__buttons">
@@ -79,9 +79,9 @@ function Hero() {
         </div>
 
         <div className="hero__trust">
-          <span>Instalacje elektryczne smart home</span>
-          <span>Estetyczne wykonanie</span>
-          <span>Możliwość rozbudowy systemu</span>
+          <span>Projekt techniczny</span>
+          <span>Estetyczny montaż</span>
+          <span>Uruchomienie i rozbudowa</span>
         </div>
       </div>
 

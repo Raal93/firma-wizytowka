@@ -88,11 +88,12 @@ export default function ServicesSection() {
         <div className="services-header">
           <span className="services-eyebrow">Zakres integracji</span>
 
-          <h2>Smart Home Loxone jako centrum instalacji</h2>
+          <h2>Zakres instalacji, które możemy przygotować i zintegrować</h2>
 
           <p>
-            Monitoring, alarm, sieć, domofon i instalacja elektryczna nie muszą być osobnymi systemami. Mogą tworzyć jeden spójny ekosystem domu, w
-            którym automatyka odpowiada za komfort, bezpieczeństwo i wygodę codziennego użytkowania.
+            Wykonujemy instalacje potrzebne w nowoczesnym domu: automatykę Loxone, elektrykę, sieć LAN/Wi-Fi, alarm, CCTV, wideodomofon, sterowanie
+            roletami, ogrzewaniem, audio i energią. Każdy element może działać samodzielnie, a tam gdzie ma to sens — zostać połączony w jeden wygodny
+            system.
           </p>
         </div>
 
@@ -106,8 +107,8 @@ export default function ServicesSection() {
               <h3>Smart Home Loxone</h3>
 
               <p>
-                Centralny system inteligentnego domu, który może integrować oświetlenie, ogrzewanie, rolety, bezpieczeństwo, audio, zarządzanie
-                energią i codzienne scenariusze domowników.
+                Automatyka Loxone pozwala zaplanować logikę działania domu: sceny świetlne, temperaturę, rolety, tryby obecności, powiadomienia i
+                wygodne sterowanie z panelu lub aplikacji.
               </p>
 
               <div className="service-core-tags">
@@ -131,7 +132,7 @@ export default function ServicesSection() {
 
               <h3>Systemy, które łączymy w jedną instalację</h3>
 
-              <p>Każdy system może działać samodzielnie. Największą wartość daje jednak ich przemyślana integracja z automatyką budynkową.</p>
+              <p>Przykładowe obszary, które możemy wykonać lub przygotować pod późniejszą rozbudowę domu.</p>
             </div>
 
             {/* Desktop: tylko kafelki obok głównej karty */}
