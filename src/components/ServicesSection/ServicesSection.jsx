@@ -2,64 +2,103 @@ import { Link } from "react-router-dom";
 import "./ServicesSection.css";
 
 const systemModules = [
+  // Bezpieczeństwo
   {
     title: "Bezpieczeństwo",
-    label: "Alarm + CCTV",
-    desc: "Alarm, monitoring i czujniki w jednym systemie.",
+    category: "security",
+    desc: "Monitoring",
     img: "/images/services/cctv.jpg",
   },
   {
-    title: "Sieć LAN / Wi-Fi",
-    label: "Infrastruktura",
-    desc: "Stabilna sieć dla automatyki i kamer.",
-    img: "/images/services/wifi.jpg",
+    title: "Bezpieczeństwo",
+    category: "security",
+    desc: "System alarmowy",
+    img: "/images/services/alarm.jpg",
   },
   {
-    title: "Dostęp i wideodomofony",
-    label: "Wejście",
-    desc: "Furtka, brama i wejście z aplikacji.",
+    title: "Bezpieczeństwo",
+    category: "security",
+    desc: "Wideodomofon",
     img: "/images/services/domofony.jpg",
   },
   {
-    title: "Oświetlenie",
-    label: "Komfort",
-    desc: "Sceny świetlne i automatyka dnia.",
-    img: "/images/services/oswietlenie.jpg",
+    title: "Bezpieczeństwo",
+    category: "security",
+    desc: "Kontrola dostępu",
+    img: "/images/services/kontrola-dostepu.jpg",
   },
   {
-    title: "Ogrzewanie i klimat",
-    label: "Temperatura",
-    desc: "Sterowanie komfortem cieplnym domu.",
-    img: "/images/services/ogrzewanie.jpg",
+    title: "Bezpieczeństwo",
+    category: "security",
+    desc: "Czujniki dymu",
+    img: "/images/services/czujniki-dymu.jpg",
   },
+
+  // Energia
   {
-    title: "Rolety / żaluzje",
-    label: "Automatyka",
-    desc: "Światło, prywatność i ochrona przed słońcem.",
-    img: "/images/services/rolety.jpg",
-  },
-  {
-    title: "Multiroom Audio",
-    label: "Audio",
-    desc: "Muzyka w strefach całego domu.",
-    img: "/images/services/audio.jpg",
-  },
-  {
-    title: "Zarządzanie energią",
-    label: "Energia",
-    desc: "Kontrola zużycia, PV i magazynu.",
+    title: "Energia",
+    category: "energy",
+    desc: "Instalacja fotowoltaiczna",
     img: "/images/services/energia.jpg",
   },
   {
-    title: "Rekuperacja / wentylacja",
-    label: "Powietrze",
-    desc: "Świeże powietrze i komfort w domu.",
-    img: "/images/services/rekuperacja.jpg",
+    title: "Energia",
+    category: "energy",
+    desc: "Urządzenia grzewcze",
+    img: "/images/services/ogrzewanie.jpg",
   },
   {
-    title: "Instalacja elektryczna",
-    label: "Fundament",
-    desc: "Baza pod automatykę i rozbudowę.",
+    title: "Energia",
+    category: "energy",
+    desc: "Rekuperacja / wentylacja",
+    img: "/images/services/rekuperacja.jpg",
+  },
+
+  // Oświetlenie
+  {
+    title: "Oświetlenie",
+    category: "lighting",
+    desc: "Zaawansowane oświetlenie",
+    img: "/images/services/oswietlenie.jpg",
+  },
+  {
+    title: "Oświetlenie",
+    category: "lighting",
+    desc: "Rolety / żaluzje",
+    img: "/images/services/rolety.jpg",
+  },
+
+  // Audiowizualny
+  {
+    title: "Audiowizualny",
+    category: "av",
+    desc: "Multiroom Audio",
+    img: "/images/services/audio.jpg",
+  },
+  {
+    title: "Audiowizualny",
+    category: "av",
+    desc: "Telewizor / kino domowe",
+    img: "/images/services/telewizor.jpg",
+  },
+
+  // Infrastruktura
+  {
+    title: "Infrastruktura",
+    category: "infra",
+    desc: "Wi-Fi",
+    img: "/images/services/wifi.jpg",
+  },
+  {
+    title: "Infrastruktura",
+    category: "infra",
+    desc: "Sieć LAN",
+    img: "/images/services/lan.jpg",
+  },
+  {
+    title: "Infrastruktura",
+    category: "infra",
+    desc: "Instalacja elektryczna",
     img: "/images/services/elektryka.jpg",
   },
 ];
@@ -68,14 +107,16 @@ const sideModules = systemModules.slice(0, 4);
 const wideModules = systemModules.slice(4);
 
 function ServiceCard({ module }) {
+  const categoryClass = `service-category-pill service-category-pill--${module.category || "other"}`;
+
   return (
     <article className="service-card">
-      <img src={module.img} alt={module.title} />
+      <img src={module.img} alt={module.desc} />
 
       <div className="service-overlay">
-        <span>{module.label}</span>
-        <h3>{module.title}</h3>
-        <p>{module.desc}</p>
+        <span className={categoryClass}>{module.title}</span>
+
+        <h3 className="service-card-heading">{module.desc}</h3>
       </div>
     </article>
   );
@@ -88,12 +129,11 @@ export default function ServicesSection() {
         <div className="services-header">
           <span className="services-eyebrow">Zakres integracji</span>
 
-          <h2>Zakres instalacji, które możemy przygotować i zintegrować</h2>
+          <h2>Zakres instalacji, które możemy przygotować</h2>
 
           <p>
-            Wykonujemy instalacje potrzebne w nowoczesnym domu: automatykę Loxone, elektrykę, sieć LAN/Wi-Fi, alarm, CCTV, wideodomofon, sterowanie
-            roletami, ogrzewaniem, audio i energią. Każdy element może działać samodzielnie, a tam gdzie ma to sens — zostać połączony w jeden wygodny
-            system.
+            Wykonujemy pełen wachlarz instalacji potrzebnych w nowoczesnym domu. Zobacz przykładowe systemy, które możemy zintegrować. Oczywiście nie
+            jest to pełna lista - jeśli chciałbyś zintegrować coś innego, skontaktuj się z nami aby sprawdzić możliwości implementacji.
           </p>
         </div>
 
@@ -107,17 +147,16 @@ export default function ServicesSection() {
               <h3>Smart Home Loxone</h3>
 
               <p>
-                Automatyka Loxone pozwala zaplanować logikę działania domu: sceny świetlne, temperaturę, rolety, tryby obecności, powiadomienia i
-                wygodne sterowanie z panelu lub aplikacji.
+                Automatyka Loxone pozwala zsynchronizować wiele elementów domu w jeden spójny system tak, abyś mógł wygodnie kontrolować całość w
+                jednej aplikacji.
               </p>
 
               <div className="service-core-tags">
-                <span>Oświetlenie</span>
-                <span>Rolety</span>
-                <span>Ogrzewanie</span>
-                <span>Alarm</span>
-                <span>CCTV</span>
+                <span>Bezpieczeństwo</span>
                 <span>Energia</span>
+                <span>Oświetlenie</span>
+                <span>Audiowizualny</span>
+                <span>Infrastruktura</span>
               </div>
 
               <Link to="/smart-home-krakow" className="service-core-link">
@@ -130,36 +169,38 @@ export default function ServicesSection() {
             <div className="services-modules-intro">
               <span>Elementy systemu</span>
 
-              <h3>Systemy, które łączymy w jedną instalację</h3>
+              <h3>Instalacje, które łączymy w jeden system</h3>
 
               <p>Przykładowe obszary, które możemy wykonać lub przygotować pod późniejszą rozbudowę domu.</p>
             </div>
 
-            {/* Desktop: tylko kafelki obok głównej karty */}
             <div className="services-grid services-grid--side services-grid--desktop">
               {sideModules.map((module) => (
-                <ServiceCard module={module} key={module.title} />
+                <ServiceCard module={module} key={`${module.category}-${module.desc}`} />
               ))}
             </div>
 
-            {/* Tablet / średnie ekrany: wszystkie kafelki w jednej siatce */}
             <div className="services-grid services-grid--tablet">
               {systemModules.map((module) => (
-                <ServiceCard module={module} key={module.title} />
+                <ServiceCard module={module} key={`${module.category}-${module.desc}`} />
               ))}
             </div>
           </div>
 
-          {/* Desktop: reszta kafelków pod spodem na pełnej szerokości */}
           {wideModules.length > 0 && (
             <div className="services-wide-modules services-wide-modules--desktop">
               <div className="services-grid services-grid--wide">
                 {wideModules.map((module) => (
-                  <ServiceCard module={module} key={module.title} />
+                  <ServiceCard module={module} key={`${module.category}-${module.desc}`} />
                 ))}
               </div>
             </div>
           )}
+        </div>
+        <div className="services-cta">
+          <Link to="/smart-home-krakow#wspolpraca-systemow" className="services-cta-link">
+            Zobacz, jak te systemy mogą pracować razem →
+          </Link>
         </div>
       </div>
     </section>
