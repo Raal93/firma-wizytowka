@@ -133,7 +133,7 @@ export default function ServicesSection() {
 
           <p>
             Wykonujemy pełen wachlarz instalacji potrzebnych w nowoczesnym domu. Zobacz przykładowe systemy, które możemy zintegrować. Oczywiście nie
-            jest to pełna lista - jeśli chciałbyś zintegrować coś innego, skontaktuj się z nami aby sprawdzić możliwości implementacji.
+            jest to pełna lista - jeśli masz pomysł na coś innego, skontaktuj się z nami aby sprawdzić możliwości implementacji.
           </p>
         </div>
 

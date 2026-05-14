@@ -65,16 +65,16 @@ const scenarios = [
     id: "return",
     label: "Powrót",
     title: "Dom przygotowuje się na Twój powrót",
-    lead: "System może przywrócić komfortowe ustawienia bez ręcznego ustawiania wielu urządzeń.",
+    lead: "System może przywrócić komfortowe warunki bez ręcznego ustawiania wielu urządzeń.",
     involved: ["security", "lighting", "energy", "infra"],
     steps: [
       {
         system: "Dostęp",
-        text: "Brama, furtka czy garaż mogą być otwierane za pomocą aplikacji.",
+        text: "System rozpoznaje uprawnionego domownika i automatycznie otwiera bramę.",
       },
       {
         system: "Oświetlenie",
-        text: "Włącza się światło w korytarzu, podjeździe lub strefie wejścia — tylko tam, gdzie jest to potrzebne.",
+        text: "Włącza się światło na podjeździe, przy drzwiach i w korytarzu — dokładnie tam, gdzie jest to potrzebne.",
       },
       {
         system: "Klimat",
@@ -82,7 +82,7 @@ const scenarios = [
       },
       {
         system: "Sterowanie",
-        text: "Całość możesz uruchomić z aplikacji, panelu, przycisku lub automatycznie według ustalonej logiki.",
+        text: "Automatyczny tryb pracy możesz w każdej chwili zmienić z aplikacji, panelu sterującego lub przycisku na ścianie.",
       },
     ],
   },
@@ -90,7 +90,7 @@ const scenarios = [
     id: "evening",
     label: "Wieczór / kino",
     title: "Scena, która łączy światło, rolety, TV i audio",
-    lead: "Zamiast osobno ustawiać oświetlenie, rolety i sprzęt audio-wideo, możesz uruchomić jedną scenę.",
+    lead: "Uruchamiasz scenę kinową, a system przygotowuje salon do seansu.",
     involved: ["lighting", "av", "energy", "infra"],
     steps: [
       {
@@ -99,15 +99,15 @@ const scenarios = [
       },
       {
         system: "Oświetlenie",
-        text: "Światło przygasa do ustalonego poziomu albo przełącza się w scenę wieczorną.",
+        text: "Światło przygasa do ustalonego poziomu.",
       },
       {
         system: "Audio-wideo",
-        text: "Telewizor, kino domowe lub multiroom audio uruchamiają odpowiednią strefę rozrywki.",
+        text: "Telewizor i system nagłośnienia uruchamiają się i przygotowują do oglądania filmu.",
       },
       {
-        system: "Komfort",
-        text: "Dom zachowuje właściwą temperaturę i nie wymaga przełączania kilku niezależnych systemów.",
+        system: "Sterowanie",
+        text: "Po zakończeniu seansu możesz jednym kliknięciem wrócić do normalnego oświetlenia, podnieść rolety i wyłączyć sprzęt.",
       },
     ],
   },
@@ -115,24 +115,24 @@ const scenarios = [
     id: "energy",
     label: "Energia i słońce",
     title: "Dom reaguje na temperaturę, słońce i produkcję energii",
-    lead: "Automatyka może sterować ogrzewaniem aby lepiej wykorzystywać energię.",
+    lead: "System steruje ogrzewaniem aby lepiej wykorzystywać energię.",
     involved: ["energy", "lighting", "infra"],
     steps: [
       {
         system: "Fotowoltaika",
-        text: "System może uwzględniać produkcję energii i zużycie w domu.",
+        text: "Gdy instalacja produkuje nadwyżkę energii, system może wykorzystać ją do grzania wody, ładowania magazynu energii lub uruchomienia wybranych urządzeń.",
       },
       {
         system: "Rolety",
-        text: "Przy mocnym słońcu rolety lub żaluzje mogą ograniczyć przegrzewanie pomieszczeń.",
+        text: "Rolety lub żaluzje pomagają wykorzystać słońce do dogrzania pomieszczeń i ograniczają ich nagrzewanie w upalne dni.",
       },
       {
         system: "Ogrzewanie",
-        text: "Temperatura może być regulowana zależnie od obecności, harmonogramu i warunków w pomieszczeniach.",
+        text: "Temperatura jest regulowana zależnie od obecności domowników, harmonogramu i wybranych preferencji.",
       },
       {
-        system: "Rekuperacja",
-        text: "Wentylacja może pracować zgodnie z potrzebami domu, a nie jako całkowicie oderwane urządzenie.",
+        system: "Wentylacja",
+        text: "Rekuperacja reguluje intensywność pracy zależnie od jakości powietrza, wilgotności i trybu domu.",
       },
     ],
   },
@@ -183,6 +183,31 @@ const scenarios = [
       {
         system: "Dostęp",
         text: "Jeśli chcesz, możesz zdalnie otworzyć furtkę, bramę lub przygotować osobny scenariusz wejścia.",
+      },
+    ],
+  },
+  {
+    id: "pets",
+    label: "Pupil sam w domu",
+    title: "Bezpieczne warunki dla pupila, gdy jesteś poza domem",
+    lead: "Smart home zadba o komfort Twojego pupila, a Tobie pozwoli w każdej chwili sprawdzić sytuację z telefonu.",
+    involved: ["security", "lighting", "energy", "infra"],
+    steps: [
+      {
+        system: "Bezpieczeństwo",
+        text: "Alarm może działać w trybie przyjaznym zwierzętom, zapobiegając fałszywym alarmom od pupila.",
+      },
+      {
+        system: "Monitoring",
+        text: "Kamery pozwalają sprawdzić, czy zwierzę jest spokojne, gdzie przebywa i czy nie dzieje się nic nietypowego.",
+      },
+      {
+        system: "Energia i klimat",
+        text: "Ogrzewanie, klimatyzacja lub rolety mogą automatycznie utrzymywać bezpieczną temperaturę w pomieszczeniach.",
+      },
+      {
+        system: "Aplikacja",
+        text: "W razie otwarcia drzwi, furtki, wykrycia dymu albo nietypowej aktywności otrzymujesz powiadomienie na telefon.",
       },
     ],
   },
