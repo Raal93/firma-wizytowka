@@ -1,5 +1,5 @@
-import Contact from "../components/Contact/Contact.jsx";
-import ServiceAreaMap from "../components/ServiceAreaMap/ServiceAreaMap.jsx";
+import Contact from "../components/contact-parent/Contact/Contact.jsx";
+import ServiceAreaMap from "../components/contact-parent/ServiceAreaMap/ServiceAreaMap.jsx";
 
 export default function ContactPage() {
   return (

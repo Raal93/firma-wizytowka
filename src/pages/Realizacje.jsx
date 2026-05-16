@@ -1,4 +1,4 @@
-import ProjectsGallery from "../components/Projects/ProjectsGallery";
+import ProjectsGallery from "../components/home/Projects/ProjectsGallery";
 import { projects } from "../data/projectsData";
 
 export default function Realizacje() {

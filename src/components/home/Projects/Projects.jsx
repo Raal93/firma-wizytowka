@@ -1,5 +1,5 @@
 import ProjectsGallery from "./ProjectsGallery";
-import { homepageProjects } from "../../data/projectsData";
+import { homepageProjects } from "../../../data/projectsData";
 
 export default function Projects() {
   return (

@@ -1,6 +1,6 @@
 import "./Hero.css";
-import hero from "../../assets/images/hero1.jpg";
-import heroSm from "../../assets/images/heroSm.jpg";
+import hero from "../../../assets/images/hero1.jpg";
+import heroSm from "../../../assets/images/heroSm.jpg";
 import { Link } from "react-router-dom";
 import { House, ShieldCheck, Zap, Settings2, ArrowRight, MapPin } from "lucide-react";
 

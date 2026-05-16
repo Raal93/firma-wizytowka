@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import Hero from "../components/Hero/Hero";
-import SmartInstallationPreview from "../components/SmartInstallationPreview/SmartInstallationPreview";
-import ServicesSection from "../components/ServicesSection/ServicesSection.jsx";
-import TrustSection from "../components/TrustSection/TrustSection.jsx";
-import FinalCTA from "../components/FinalCTA/FinalCTA.jsx";
-import Projects from "../components/Projects/Projects.jsx";
+import Hero from "../components/home/Hero/Hero";
+import ServicesSection from "../components/home/ServicesSection/ServicesSection";
+import SmartInstallationPreview from "../components/home/SmartInstallationPreview/SmartInstallationPreview";
+import TrustSection from "../components/home/TrustSection/TrustSection";
+import Projects from "../components/home/Projects/Projects";
+import FinalCTA from "../components/common/FinalCTA/FinalCTA";
 
 export default function Home() {
   return (
