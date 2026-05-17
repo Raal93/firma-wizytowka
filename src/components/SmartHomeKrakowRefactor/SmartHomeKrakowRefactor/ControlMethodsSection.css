@@ -1,0 +1,204 @@
+.control-methods-section {
+  position: relative;
+  padding: 86px 8%;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(56, 189, 248, 0.1), transparent 32%), linear-gradient(90deg, #020617 0%, #0f172a 55%, #020617 100%);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.control-methods-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(90deg, black, transparent 78%);
+  pointer-events: none;
+}
+
+.control-methods-container {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.control-methods-header {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.control-methods-eyebrow {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(125, 211, 252, 0.24);
+  border-radius: 999px;
+  padding: 0 14px;
+  background: rgba(15, 23, 42, 0.62);
+  color: #bae6fd;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.control-methods-header h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.control-methods-header p {
+  margin: 18px 0 0;
+  max-width: 660px;
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.control-methods-list {
+  position: relative;
+  display: grid;
+  gap: 12px;
+}
+
+.control-methods-list::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 31px;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.7), rgba(56, 189, 248, 0.16), transparent);
+}
+
+.control-method {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.control-method__number {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  border-radius: 20px;
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.7)),
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 52%);
+  color: #7dd3fc;
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  box-shadow: 0 16px 42px rgba(2, 6, 23, 0.32);
+}
+
+.control-method__content {
+  position: relative;
+  min-height: 64px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 22px;
+  padding: 18px 22px;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.44)), linear-gradient(90deg, rgba(56, 189, 248, 0.08), transparent 42%);
+  box-shadow:
+    0 18px 54px rgba(2, 6, 23, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.control-method__content::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.95), rgba(56, 189, 248, 0.1));
+}
+
+.control-method__content h3 {
+  margin: 0 0 5px;
+  color: #f8fafc;
+  font-size: 1.08rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.control-method__content p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .control-methods-section {
+    padding: 72px 6%;
+  }
+
+  .control-methods-header {
+    margin-bottom: 32px;
+  }
+
+  .control-method {
+    grid-template-columns: 54px 1fr;
+    gap: 14px;
+  }
+
+  .control-methods-list::before {
+    left: 26px;
+  }
+
+  .control-method__number {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    font-size: 0.78rem;
+  }
+
+  .control-method__content {
+    padding: 16px 18px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .control-methods-header h2 {
+    font-size: clamp(28px, 9vw, 36px);
+  }
+
+  .control-method {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .control-methods-list::before {
+    display: none;
+  }
+
+  .control-method__number {
+    width: auto;
+    height: 38px;
+    justify-content: flex-start;
+    padding: 0 14px;
+    border-radius: 999px;
+  }
+
+  .control-method__content {
+    padding: 17px 18px;
+  }
+}

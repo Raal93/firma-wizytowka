@@ -38,6 +38,67 @@
   line-height: 1.68;
 }
 
+/* =========================
+   FADE DIVIDER WITH CHIPS
+========================= */
+
+.smart-fade-divider {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: var(--smart-divider-margin-top, 30px);
+  padding-top: var(--smart-divider-padding-top, 24px);
+}
+
+.smart-fade-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(var(--smart-divider-width, 620px), 100%);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.78), rgba(56, 189, 248, 0.18), transparent);
+}
+
+.smart-fade-divider__chip {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(125, 211, 252, 0.22);
+  border-radius: 999px;
+  padding: 0 13px;
+  background: rgba(15, 23, 42, 0.58);
+  color: #bae6fd;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.smart-fade-divider--wide {
+  --smart-divider-width: 760px;
+}
+
+.smart-fade-divider--compact {
+  --smart-divider-margin-top: 26px;
+  --smart-divider-padding-top: 20px;
+}
+
+.smart-fade-divider--center {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.smart-fade-divider--center::before {
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.18), rgba(56, 189, 248, 0.78), rgba(56, 189, 248, 0.18), transparent);
+}
+
 @media (max-width: 1050px) {
   .smart-benefits-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

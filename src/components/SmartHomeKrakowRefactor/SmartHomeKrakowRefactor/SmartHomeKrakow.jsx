@@ -10,6 +10,7 @@ import TechnologySection from "./TechnologySection";
 import ProcessSection from "./ProcessSection";
 import FAQSection from "./FAQSection";
 import FinalCTA from "./FinalCTA";
+import ControlMethodsSection from "./ControlMethodsSection";
 
 export default function SmartHomeKrakow() {
   return (
@@ -22,6 +23,7 @@ export default function SmartHomeKrakow() {
       <PlanningSection />
       <TechnologySection />
       <ProcessSection />
+      <ControlMethodsSection />
       <FAQSection />
       <FinalCTA />
     </main>
