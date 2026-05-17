@@ -19,13 +19,13 @@ const controlMethods = [
   {
     number: "04",
     title: "Obsługa lokalna i awaryjna",
-    text: "Manipulator alarmu, pilot, bramofon lub lokalne sterowanie bramą.",
+    text: "Manipulator alarmu, pilot, bramofon czy przycisk przy bramie.",
   },
 ];
 
 export default function ControlMethodsSection() {
   return (
-    <section className="control-methods-section">
+    <section className="control-methods-section" id="control-methods">
       <div className="control-methods-container">
         <div className="control-methods-header">
           <span className="control-methods-eyebrow">Sposób sterowania</span>

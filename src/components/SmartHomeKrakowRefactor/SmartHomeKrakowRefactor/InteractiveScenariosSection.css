@@ -486,6 +486,59 @@
   line-height: 1.55;
 }
 
+.smart-inline-cta {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  border: 1px solid rgba(125, 211, 252, 0.22);
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: rgba(15, 23, 42, 0.44);
+  color: #bae6fd;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.smart-inline-cta span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  font-size: 0.95rem;
+  transform: translateY(-1px);
+  transition: transform 180ms ease;
+}
+
+.smart-inline-cta:hover {
+  border-color: rgba(125, 211, 252, 0.42);
+  background: rgba(14, 165, 233, 0.1);
+  color: #e0f2fe;
+  transform: translateY(-1px);
+}
+
+.smart-inline-cta:hover span {
+  transform: translateY(1px);
+}
+
+@media (max-width: 520px) {
+  .smart-inline-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.35;
+  }
+}
+
 @media (max-width: 1180px) {
   .smart-interactive__main {
     grid-template-columns: 1fr;

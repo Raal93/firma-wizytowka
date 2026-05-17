@@ -222,7 +222,6 @@ export default function InteractiveScenariosSection() {
             <div className="smart-card smart-control-card">
               <span>Sterowanie</span>
               <h3>Wszystko w jednym miejscu</h3>
-              <p>Aplikacja, panel ścienny, przycisk sceny i automatyczne reguły mogą prowadzić do tego samego celu: prostszej obsługi domu.</p>
 
               <div className="smart-control-phone" aria-hidden="true">
                 <div className="smart-control-phone__top">
@@ -244,6 +243,10 @@ export default function InteractiveScenariosSection() {
                   </div>
                 </div>
               </div>
+              <a href="#control-methods" className="smart-inline-cta">
+                Zobacz sposoby sterowania
+                <span aria-hidden="true">↓</span>
+              </a>
             </div>
 
             <div className="smart-card smart-design-note">
