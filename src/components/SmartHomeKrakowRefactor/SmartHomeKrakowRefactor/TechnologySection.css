@@ -1,0 +1,42 @@
+.smart-technology {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.smart-technology__grid {
+  display: grid;
+  gap: 16px;
+}
+
+.smart-technology-card {
+  border-radius: 26px;
+  padding: 26px;
+}
+
+.smart-technology-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.32rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.smart-technology-card p {
+  margin: 0;
+  color: var(--smart-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .smart-technology {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .smart-technology-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+}

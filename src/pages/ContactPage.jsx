@@ -1,11 +1,16 @@
-import Contact from "../components/contact-parent/Contact/Contact.jsx";
-import ServiceAreaMap from "../components/contact-parent/ServiceAreaMap/ServiceAreaMap.jsx";
+import ServiceAreaMap from "../components/contact/ServiceAreaMap/ServiceAreaMap.jsx";
+import ContactHero from "../components/contact/ContactHero/ContactHero";
+import ContactProcess from "../components/contact/ContactProcess/ContactProcess";
+import ContactFormSection from "../components/contact/ContactFormSection/ContactFormSection";
+import "../components/contact/ContactShared.css";
 
 export default function ContactPage() {
   return (
-    <>
+    <main className="contact-page">
+      <ContactHero />
       <ServiceAreaMap />
-      <Contact />
-    </>
+      <ContactProcess />
+      <ContactFormSection />
+    </main>
   );
 }

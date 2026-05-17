@@ -1,0 +1,624 @@
+/* src/components/SmartHomeKrakow/SmartHero.css */
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.smart-hero {
+  position: relative;
+  min-height: 84vh;
+  display: flex;
+  align-items: center;
+  padding: 108px 0 86px;
+}
+
+.smart-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 38%), linear-gradient(315deg, rgba(56, 189, 248, 0.05), transparent 42%);
+  pointer-events: none;
+}
+
+.smart-hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(330px, 0.96fr);
+  grid-template-areas:
+    "content visual"
+    "actions visual";
+  column-gap: 56px;
+  row-gap: 0;
+  align-items: center;
+}
+
+.smart-hero__content {
+  grid-area: content;
+}
+
+.smart-hero__content h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+/* =========================
+   SCOPE / CHIPS
+========================= */
+
+.smart-hero__scope {
+  position: relative;
+  margin-top: 34px;
+  padding-top: 24px;
+}
+
+.smart-hero__scope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(680px, 100%);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.78), rgba(56, 189, 248, 0.18), transparent);
+}
+
+.smart-hero__tags {
+  max-width: 720px;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.smart-hero__actions {
+  grid-area: actions;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.smart-hero__actions .smart-btn {
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+.smart-btn--with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 12px;
+  overflow: hidden;
+}
+
+.smart-btn--with-icon > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.smart-btn__arrow {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  flex: 0 0 34px;
+  place-items: center;
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  border-radius: 999px;
+  background: radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.18), transparent 55%), rgba(2, 6, 23, 0.42);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 10px 24px rgba(14, 165, 233, 0.12);
+  overflow: hidden;
+}
+
+.smart-btn__arrow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(125, 211, 252, 0.42), transparent 38%, rgba(56, 189, 248, 0.18));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.smart-btn__arrow svg {
+  position: relative;
+  z-index: 1;
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: #bae6fd;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.25s ease;
+}
+
+.smart-btn:hover .smart-btn__arrow::before {
+  opacity: 1;
+}
+
+.smart-btn:hover .smart-btn__arrow svg {
+  transform: translateY(2px);
+}
+
+.smart-btn__arrow-line {
+  stroke-dasharray: 13;
+  stroke-dashoffset: 0;
+}
+
+.smart-btn:hover .smart-btn__arrow-line {
+  animation: smartArrowLine 0.55s ease;
+}
+
+.smart-btn:hover .smart-btn__arrow-head {
+  animation: smartArrowHead 0.55s ease;
+}
+
+.smart-btn--with-icon .smart-btn__arrow {
+  animation: smartArrowNudge 5.4s ease-in-out infinite;
+}
+
+.smart-btn--with-icon:hover .smart-btn__arrow {
+  animation-play-state: paused;
+}
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.smart-hero__visual {
+  grid-area: visual;
+  position: relative;
+  min-height: 500px;
+  display: grid;
+  place-items: center;
+}
+
+.smart-hero__orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  border-radius: 999px;
+}
+
+.smart-hero__orbit--one {
+  width: 410px;
+  height: 410px;
+  animation: smartPulse 7s ease-in-out infinite;
+}
+
+.smart-hero__orbit--two {
+  width: 300px;
+  height: 300px;
+  border-style: dashed;
+  transform: rotate(24deg);
+}
+
+/* =========================
+   SMART PANEL
+========================= */
+
+.smart-home-panel {
+  position: relative;
+  width: min(360px, 100%);
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  border-radius: 34px;
+  padding: 24px;
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.78)),
+    radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.18), transparent 36%);
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  animation: smartFloat 7s ease-in-out infinite;
+}
+
+.smart-home-panel__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--smart-muted-soft);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.smart-home-panel__top strong {
+  color: var(--smart-accent-soft);
+}
+
+.smart-home-panel__main {
+  display: grid;
+  place-items: center;
+  min-height: 215px;
+  margin: 26px 0;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 26px;
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.16), transparent 58%), rgba(2, 6, 23, 0.5);
+  text-align: center;
+}
+
+.smart-home-panel__main span {
+  color: var(--smart-muted-soft);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+}
+
+.smart-home-panel__main strong {
+  display: block;
+  color: #ffffff;
+  font-size: clamp(44px, 5vw, 66px);
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+.smart-home-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.smart-home-panel__grid span {
+  min-height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 14px;
+  padding: 10px 8px;
+  background: rgba(15, 23, 42, 0.65);
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes smartFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes smartPulse {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.035);
+  }
+}
+
+@keyframes smartArrowLine {
+  0% {
+    stroke-dashoffset: 13;
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes smartArrowHead {
+  0%,
+  35% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes smartArrowNudge {
+  0%,
+  72%,
+  100% {
+    transform: translateY(0);
+  }
+
+  76% {
+    transform: translateY(2px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+
+  84% {
+    transform: translateY(1.5px);
+  }
+
+  88% {
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+  .smart-hero {
+    min-height: auto;
+    padding: 96px 0 72px;
+  }
+
+  .smart-hero__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "visual"
+      "actions";
+    gap: 34px;
+  }
+
+  .smart-hero__visual {
+    width: min(420px, 100%);
+    min-height: 410px;
+    justify-self: start;
+    margin-left: clamp(36px, 9vw, 100px);
+    place-items: center;
+  }
+
+  .smart-home-panel {
+    width: min(340px, 100%);
+  }
+
+  .smart-hero__orbit--one {
+    width: 380px;
+    height: 380px;
+  }
+
+  .smart-hero__orbit--two {
+    width: 280px;
+    height: 280px;
+  }
+
+  .smart-hero__actions {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .smart-hero {
+    padding: 82px 0 58px;
+  }
+
+  .smart-hero__content h1 {
+    letter-spacing: -0.04em;
+  }
+
+  .smart-hero__scope {
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+
+  .smart-hero__grid {
+    gap: 28px;
+  }
+
+  .smart-hero__visual {
+    width: min(340px, 100%);
+    min-height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    place-items: center;
+  }
+
+  .smart-home-panel {
+    width: min(300px, 100%);
+    border-radius: 30px;
+    padding: 20px;
+  }
+
+  .smart-hero__orbit--one {
+    width: 320px;
+    height: 320px;
+  }
+
+  .smart-hero__orbit--two {
+    width: 235px;
+    height: 235px;
+  }
+
+  .smart-hero__actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .smart-hero__actions .smart-btn {
+    width: auto;
+    flex: 1 1 0;
+    min-height: 42px;
+    padding-inline: 13px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .smart-btn--with-icon {
+    gap: 7px;
+    padding-right: 8px;
+  }
+
+  .smart-btn__arrow {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+
+  .smart-btn__arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .smart-hero__grid {
+    gap: 24px;
+  }
+
+  .smart-hero__visual {
+    min-height: 300px;
+  }
+
+  .smart-home-panel {
+    width: min(270px, 100%);
+    border-radius: 28px;
+    padding: 18px;
+  }
+
+  .smart-home-panel__main {
+    min-height: 150px;
+    margin: 18px 0;
+  }
+
+  .smart-home-panel__main strong {
+    font-size: clamp(38px, 14vw, 52px);
+  }
+
+  .smart-home-panel__grid {
+    gap: 7px;
+  }
+
+  .smart-home-panel__grid span {
+    min-height: 36px;
+    border-radius: 12px;
+    padding: 8px 6px;
+    font-size: 0.64rem;
+  }
+
+  .smart-hero__orbit--one {
+    width: 285px;
+    height: 285px;
+  }
+
+  .smart-hero__orbit--two {
+    width: 210px;
+    height: 210px;
+  }
+
+  .smart-hero__actions {
+    gap: 8px;
+  }
+
+  .smart-hero__actions .smart-btn {
+    min-height: 40px;
+    padding-inline: 10px;
+    font-size: 0.72rem;
+    letter-spacing: -0.01em;
+  }
+
+  .smart-btn--with-icon {
+    gap: 6px;
+    padding-right: 7px;
+  }
+
+  .smart-btn__arrow {
+    width: 25px;
+    height: 25px;
+    flex-basis: 25px;
+  }
+
+  .smart-btn__arrow svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+@media (max-width: 420px) {
+  .smart-hero__actions {
+    gap: 6px;
+  }
+
+  .smart-hero__actions .smart-btn {
+    min-height: 38px;
+    padding-inline: 8px;
+    font-size: 0.64rem;
+  }
+
+  .smart-btn--with-icon {
+    gap: 5px;
+    padding-right: 6px;
+  }
+
+  .smart-btn__arrow {
+    width: 22px;
+    height: 22px;
+    flex-basis: 22px;
+  }
+
+  .smart-btn__arrow svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .smart-hero__tags {
+    gap: 8px;
+  }
+
+  .smart-chip {
+    font-size: 0.7rem;
+    padding: 7px 10px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .smart-home-panel,
+  .smart-hero__orbit--one,
+  .smart-btn--with-icon .smart-btn__arrow {
+    animation: none;
+  }
+
+  .smart-btn__arrow svg,
+  .smart-btn__arrow-line,
+  .smart-btn__arrow-head {
+    animation: none !important;
+    transition: none;
+  }
+}

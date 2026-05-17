@@ -129,7 +129,7 @@ export default function ServicesSection() {
         <div className="services-header">
           <span className="services-eyebrow">Zakres integracji</span>
 
-          <h2>Zakres instalacji, które możemy przygotować</h2>
+          <h2>Co możemy zautomatyzować?</h2>
 
           <p>
             Wykonujemy pełen wachlarz instalacji potrzebnych w nowoczesnym domu. Zobacz przykładowe systemy, które możemy zintegrować. Oczywiście nie
@@ -171,7 +171,7 @@ export default function ServicesSection() {
 
               <h3>Instalacje, które łączymy w jeden system</h3>
 
-              <p>Przykładowe obszary, które możemy wykonać lub przygotować pod późniejszą rozbudowę domu.</p>
+              <p>Przykładowe obszary, które możemy wykonać lub przygotować pod późniejszą rozbudowę instalacji.</p>
             </div>
 
             <div className="services-grid services-grid--side services-grid--desktop">

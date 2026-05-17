@@ -1,0 +1,48 @@
+.smart-final-cta {
+  padding: 84px 0 112px;
+}
+
+.smart-final-cta__box {
+  border-color: rgba(125, 211, 252, 0.22);
+  border-radius: 34px;
+  padding: clamp(32px, 5vw, 58px);
+  background:
+    radial-gradient(circle at 12% 16%, rgba(56, 189, 248, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.68));
+  box-shadow: var(--smart-shadow);
+}
+
+.smart-final-cta__box h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.smart-final-cta__box p {
+  max-width: 760px;
+  margin: 20px 0 0;
+  color: var(--smart-muted);
+  line-height: 1.8;
+}
+
+.smart-final-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+@media (max-width: 760px) {
+  .smart-final-cta {
+    padding: 72px 0 92px;
+  }
+
+  .smart-final-cta__box {
+    border-radius: 24px;
+  }
+
+  .smart-final-cta__actions {
+    flex-direction: column;
+  }
+}
