@@ -11,6 +11,7 @@ import ProcessSection from "./ProcessSection";
 import FAQSection from "./FAQSection";
 import FinalCTA from "./FinalCTA";
 import ControlMethodsSection from "./ControlMethodsSection";
+import SmartSystemMap from "./SmartSystemMap";
 
 export default function SmartHomeKrakow() {
   return (
@@ -19,6 +20,7 @@ export default function SmartHomeKrakow() {
       <SmartIntro />
       <BenefitsSection />
       <InteractiveScenariosSection />
+      <SmartSystemMap />
       <SmartAreasSection />
       <PlanningSection />
       <TechnologySection />

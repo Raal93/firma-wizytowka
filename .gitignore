@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+smart-instalacje-backend/.env
+smart-instalacje-backend/node_modules
