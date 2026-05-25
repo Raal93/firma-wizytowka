@@ -14,8 +14,8 @@ export default function PlanningSection() {
           <span className="smart-eyebrow">Infrastruktura</span>
           <h2 className="smart-title">Dobrze zaplanowana instalacja daje więcej możliwości później</h2>
           <p className="smart-lead">
-            System smart home można wdrażać etapami. Kluczowe jest to, żeby już na etapie instalacji przygotować dom pod późniejszą rozbudowę —
-            szczególnie w tych trzech obszarach:
+            System smart home można wdrażać etapami. Kluczowe jest to, żeby na etapie instalacji przygotować dom pod późniejszą rozbudowę. Oto 3
+            obszary, których uwzględnienie da Ci największą elastyczność w przyszłości:
           </p>
 
           <ul className="smart-planning__list">
