@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import "./ServicesSection.css";
 
+const categoryLinks = {
+  security: "/smart-home-krakow#obszary-integracji-bezpieczenstwo",
+  energy: "/smart-home-krakow#obszary-integracji-energia-klimat",
+  lighting: "/smart-home-krakow#obszary-integracji-oswietlenie",
+  av: "/smart-home-krakow#obszary-integracji-audio-wideo",
+  infra: "/smart-home-krakow#planning-section",
+};
+
 const systemModules = [
   // Bezpieczeństwo
   {
@@ -36,19 +44,19 @@ const systemModules = [
 
   // Energia
   {
-    title: "Energia",
+    title: "Energia i klimat",
     category: "energy",
     desc: "Instalacja fotowoltaiczna",
     img: "/images/services/energia.jpg",
   },
   {
-    title: "Energia",
+    title: "Energia i klimat",
     category: "energy",
     desc: "Urządzenia grzewcze",
     img: "/images/services/ogrzewanie.jpg",
   },
   {
-    title: "Energia",
+    title: "Energia i klimat",
     category: "energy",
     desc: "Rekuperacja / wentylacja",
     img: "/images/services/rekuperacja.jpg",
@@ -108,13 +116,16 @@ const wideModules = systemModules.slice(4);
 
 function ServiceCard({ module }) {
   const categoryClass = `service-category-pill service-category-pill--${module.category || "other"}`;
+  const categoryLink = categoryLinks[module.category] || "/smart-home-krakow";
 
   return (
     <article className="service-card">
       <img src={module.img} alt={module.desc} />
 
       <div className="service-overlay">
-        <span className={categoryClass}>{module.title}</span>
+        <Link to={categoryLink} className={categoryClass}>
+          {module.title}
+        </Link>
 
         <h3 className="service-card-heading">{module.desc}</h3>
       </div>
@@ -152,11 +163,11 @@ export default function ServicesSection() {
               </p>
 
               <div className="service-core-tags">
-                <span>Bezpieczeństwo</span>
-                <span>Energia</span>
-                <span>Oświetlenie</span>
-                <span>Audiowizualny</span>
-                <span>Infrastruktura</span>
+                <Link to={categoryLinks.security}>Bezpieczeństwo</Link>
+                <Link to={categoryLinks.energy}>Energia i klimat</Link>
+                <Link to={categoryLinks.lighting}>Oświetlenie</Link>
+                <Link to={categoryLinks.av}>Audiowizualny</Link>
+                <Link to={categoryLinks.infra}>Infrastruktura</Link>
               </div>
 
               <Link to="/smart-home-krakow" className="service-core-link">
@@ -197,6 +208,7 @@ export default function ServicesSection() {
             </div>
           )}
         </div>
+
         <div className="services-cta">
           <Link to="/smart-home-krakow#wspolpraca-systemow" className="services-cta-link">
             Zobacz, jak te systemy mogą pracować razem →

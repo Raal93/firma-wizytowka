@@ -1,22 +1,21 @@
 import "./PlanningSection.css";
 
 const planningPoints = [
-  "łatwiej dobrać przewody, obwody, rozdzielnię i miejsce na sterowniki",
-  "mniej późniejszych przeróbek, bez dokładania przypadkowych modułów",
-  "czytelna logika przycisków, scen, czujników i trybów domu",
-  "instalacja może być przygotowana pod rozbudowę, nawet jeśli startujesz od mniejszego zakresu",
+  "miejsce w rozdzielni na automatykę, zasilacze, zabezpieczenia i przyszłe moduły",
+  "przewody do rolet, bram, furtki, czujników, przycisków scen, audio i multimediów",
+  "punkty LAN, przewody pod kamery IP, miejsca pod access pointy Wi-Fi, wideodomofon i szafka teletechniczna",
 ];
 
 export default function PlanningSection() {
   return (
-    <section className="smart-section">
+    <section id="planning-section" className="smart-section">
       <div className="smart-container smart-planning">
         <div className="smart-planning__content">
-          <span className="smart-eyebrow">Najważniejsza decyzja</span>
-          <h2 className="smart-title">Najlepszy smart home zaczyna się przed wykonaniem instalacji.</h2>
+          <span className="smart-eyebrow">Infrastruktura</span>
+          <h2 className="smart-title">Dobrze zaplanowana instalacja daje więcej możliwości później</h2>
           <p className="smart-lead">
-            Automatyka działa najlepiej wtedy, gdy jest zaplanowana razem z elektryką, siecią, bezpieczeństwem i sposobem użytkowania domu. Wtedy
-            system jest spójny technicznie, a nie składany z przypadkowych dodatków.
+            System smart home można wdrażać etapami. Kluczowe jest to, żeby już na etapie instalacji przygotować dom pod późniejszą rozbudowę —
+            szczególnie w tych trzech obszarach:
           </p>
 
           <ul className="smart-planning__list">
@@ -30,10 +29,10 @@ export default function PlanningSection() {
           <div className="smart-planning__center">Projekt</div>
           <span>Okablowanie</span>
           <span>Rozdzielnia</span>
+          <span>Audio</span>
+          <span>Wi-Fi</span>
           <span>Sieć LAN</span>
-          <span>Rolety</span>
-          <span>Ogrzewanie</span>
-          <span>Alarm</span>
+          <span>Szafa tech.</span>
         </div>
       </div>
     </section>

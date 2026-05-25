@@ -97,26 +97,51 @@ const scenarios = [
   },
   {
     id: "energy",
-    label: "Energia i słońce",
-    title: "Dom reaguje na temperaturę, słońce i produkcję energii",
-    lead: "System steruje ogrzewaniem aby lepiej wykorzystywać energię.",
+    label: "Zimowy słoneczny dzień",
+    title: "Dom wykorzystuje słońce do ogrzewania i oszczędzania energii",
+    lead: "System odsłania nasłonecznione okna, żeby wpuścić jak najwięcej naturalnego ciepła.",
     involved: ["energy", "lighting", "infra"],
     steps: [
       {
-        system: "Fotowoltaika",
-        text: "Gdy instalacja produkuje nadwyżkę energii, system może wykorzystać ją do grzania wody, ładowania magazynu energii lub uruchomienia wybranych urządzeń.",
+        system: "Pogoda",
+        text: "System sprawdza temperaturę zewnętrzną, nasłonecznienie i warunki w pomieszczeniach, żeby ocenić, gdzie warto wykorzystać naturalne ciepło.",
       },
       {
         system: "Rolety",
-        text: "Rolety lub żaluzje pomagają wykorzystać słońce do dogrzania pomieszczeń i ograniczają ich nagrzewanie w upalne dni.",
+        text: "Rolety lub żaluzje odsłaniają okna po słonecznej stronie domu, wpuszczając więcej światła i ciepła do środka.",
       },
       {
         system: "Ogrzewanie",
-        text: "Temperatura jest regulowana zależnie od obecności domowników, harmonogramu i wybranych preferencji.",
+        text: "Ogrzewanie ogranicza pracę w pomieszczeniach dogrzewanych przez słońce, utrzymując zadaną temperaturę bez przegrzewania.",
       },
       {
         system: "Wentylacja",
-        text: "Rekuperacja reguluje intensywność pracy zależnie od jakości powietrza, wilgotności i trybu domu.",
+        text: "Rekuperacja reguluje intensywność pracy zależnie od jakości powietrza, wilgotności i aktualnego trybu domu.",
+      },
+    ],
+  },
+  {
+    id: "hotday",
+    label: "Letni upał",
+    title: "Dom ogranicza przegrzewanie i wspiera pracę klimatyzacji",
+    lead: "System reaguje na słońce i temperaturę, utrzymując komfort w całym domu.",
+    involved: ["energy", "lighting", "infra"],
+    steps: [
+      {
+        system: "Rolety",
+        text: "Rolety lub żaluzje opuszczają się od nasłonecznionej strony, ograniczając nagrzewanie pomieszczeń.",
+      },
+      {
+        system: "Klimatyzacja",
+        text: "Chłodzenie pracuje tam, gdzie jest potrzebne, zgodnie z temperaturą, obecnością domowników i ustawionymi preferencjami.",
+      },
+      {
+        system: "Wentylacja",
+        text: "Rekuperacja dostosowuje intensywność pracy do jakości powietrza, wilgotności i aktualnego trybu domu.",
+      },
+      {
+        system: "Fotowoltaika",
+        text: "Gdy fotowoltaika produkuje nadwyżkę energii, system może wykorzystać ją do chłodzenia domu, ładowania magazynu energii, nagrzewania wody czy zasilania wybranych urządzeń.",
       },
     ],
   },

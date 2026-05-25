@@ -15,8 +15,8 @@ const smartBenefits = [
     text: "Alarm, monitoring, wideodomofon, czujniki i powiadomienia tworzą spójny system, który pomaga szybciej reagować na zdarzenia.",
   },
   {
-    title: "Jedna wygodna obsługa",
-    text: "Zamiast wielu osobnych aplikacji i pilotów, dom może być sterowany z panelu, telefonu, przycisków ściennych lub automatycznych scen.",
+    title: "Jedno miejsce obsługi",
+    text: "Dom może być sterowany z panelu, telefonu, przycisków ściennych lub za pomocą automatycznych scen — zamiast wielu osobnych aplikacji i pilotów.",
   },
   {
     title: "Kontrola nad energią",
@@ -43,10 +43,7 @@ export default function SmartInstallationPreview() {
 
             <h2>Co zmienia dobrze zaprojektowany Smart Home?</h2>
 
-            <p>
-              Największa wartość automatyki nie polega na samej aplikacji. Chodzi o dom, który działa przewidywalnie, ogranicza codzienne klikanie i
-              pozwala łatwo dopasować funkcje do sposobu życia.
-            </p>
+            <div className="smart-preview__fade-divider smart-preview__fade-divider--wide" aria-hidden="true" />
           </div>
 
           <div className="smart-preview__visual" aria-hidden="true">

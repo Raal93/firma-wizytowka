@@ -8,7 +8,7 @@ const heroTiles = [
   {
     icon: House,
     title: "Smart Home",
-    text: "Loxone, sceny, automatyka",
+    text: "Loxone, sceny, oświetlenie",
   },
   {
     icon: ShieldCheck,
@@ -22,8 +22,8 @@ const heroTiles = [
   },
   {
     icon: Settings2,
-    title: "Kompleksowo",
-    text: "Projekt, montaż, uruchomienie",
+    title: "Infrastruktura",
+    text: "Okablowanie, sieć, rozdzielnia",
   },
 ];
 

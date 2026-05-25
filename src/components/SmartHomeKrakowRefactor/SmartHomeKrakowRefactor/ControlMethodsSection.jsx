@@ -14,7 +14,7 @@ const controlMethods = [
   {
     number: "03",
     title: "Aplikacja w telefonie",
-    text: "Podgląd, zdalne sterowanie i powiadomienia.",
+    text: "Ustawienia, podgląd, zdalne sterowanie i powiadomienia.",
   },
   {
     number: "04",
