@@ -13,14 +13,17 @@ export default function ProjectsGallery({
   const [active, setActive] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
   const [closing, setClosing] = useState(false);
+  const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
 
   const openModal = (project) => {
     setActive(project);
     setImageIndex(0);
+    setIsFullscreenOpen(false);
   };
 
   const closeModal = () => {
     setClosing(true);
+    setIsFullscreenOpen(false);
 
     setTimeout(() => {
       setActive(null);
@@ -29,14 +32,22 @@ export default function ProjectsGallery({
     }, 200);
   };
 
+  const openFullscreen = () => {
+    setIsFullscreenOpen(true);
+  };
+
+  const closeFullscreen = () => {
+    setIsFullscreenOpen(false);
+  };
+
   const nextImage = () => {
-    if (!active) return;
+    if (!active || isFullscreenOpen) return;
 
     setImageIndex((prev) => (prev === active.gallery.length - 1 ? 0 : prev + 1));
   };
 
   const prevImage = () => {
-    if (!active) return;
+    if (!active || isFullscreenOpen) return;
 
     setImageIndex((prev) => (prev === 0 ? active.gallery.length - 1 : prev - 1));
   };
@@ -47,9 +58,17 @@ export default function ProjectsGallery({
     document.body.style.overflow = "hidden";
 
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") closeModal();
-      if (e.key === "ArrowRight") nextImage();
-      if (e.key === "ArrowLeft") prevImage();
+      if (e.key === "Escape") {
+        if (isFullscreenOpen) {
+          closeFullscreen();
+          return;
+        }
+
+        closeModal();
+      }
+
+      if (!isFullscreenOpen && e.key === "ArrowRight") nextImage();
+      if (!isFullscreenOpen && e.key === "ArrowLeft") prevImage();
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -58,13 +77,14 @@ export default function ProjectsGallery({
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [active]);
+  }, [active, isFullscreenOpen]);
 
   return (
     <section className={`projects ${pageMode ? "projects--page" : ""}`}>
       <div className="projects__header">
         <p className="projects__label">{label}</p>
         <h2>{title}</h2>
+
         {Array.isArray(description) ? (
           <div className="projects__description">
             {description.map((paragraph, index) => (
@@ -112,7 +132,7 @@ export default function ProjectsGallery({
             </button>
 
             <div className="modal__left">
-              <div className="modal__imageFrame">
+              <div className="modal__imageFrame" onDoubleClick={openFullscreen}>
                 {active.gallery.length > 1 && (
                   <button type="button" className="modal__arrow modal__arrow--left" onClick={prevImage} aria-label="Poprzednie zdjęcie">
                     <span className="arrow-icon">‹</span>
@@ -156,11 +176,23 @@ export default function ProjectsGallery({
                 ))}
               </ul>
 
-              <Link to={active.offerLink} className="modal__button">
-                Zobacz ofertę
+              <Link to="/smart-home-krakow" className="modal__button">
+                Zobacz co możemy zrobić dla Ciebie
               </Link>
             </div>
           </div>
+
+          {isFullscreenOpen && (
+            <div className="imageFullscreen" onClick={closeFullscreen}>
+              <button type="button" className="imageFullscreen__close" onClick={closeFullscreen} aria-label="Zamknij powiększone zdjęcie">
+                ✕
+              </button>
+
+              <div className="imageFullscreen__inner" onClick={(e) => e.stopPropagation()} onDoubleClick={closeFullscreen}>
+                <img src={active.gallery[imageIndex]} alt={active.title} />
+              </div>
+            </div>
+          )}
         </div>
       )}
     </section>

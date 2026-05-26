@@ -4,9 +4,9 @@ import "./FinalCTA.css";
 
 const cooperationSteps = [
   "Rozmowa o projekcie",
-  "Ustalenie potrzeb i zakresu",
+  "Ustalenie potrzeb i zakresu prac",
   "Dobór rozwiązań",
-  "Akceptacja koncepcji",
+  "Akceptacja koncepcji przez klienta",
   "Realizacja i uruchomienie",
 ];
 
@@ -21,7 +21,7 @@ export default function FinalCTA() {
             <h2>Skontaktuj się z nami</h2>
 
             <p>
-              Opisz krótko, na jakim etapie jest inwestycja i jakie systemy chcesz połączyć. Wspólnie ustalimy, co ma sens technicznie, użytkowo i
+              Opisz na jakim etapie jest inwestycja i jakie systemy chcesz połączyć. Pomożemy Ci ustalić, co ma sens technicznie, użytkowo i
               budżetowo.
             </p>
 
@@ -36,7 +36,7 @@ export default function FinalCTA() {
                 530 128 138
               </a>
               <Link to="/kontakt#formularz" className="final-cta__button final-cta__button--secondary">
-                Napisz do nas
+                Użyj formularza
               </Link>
             </div>
           </div>

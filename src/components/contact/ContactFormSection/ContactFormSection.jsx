@@ -25,7 +25,7 @@ export default function ContactFormSection() {
     "na jakim etapie są prace: projekt, stan surowy, przed tynkami, wykończenie",
     "co chcesz zautomatyzować: światło, rolety, ogrzewanie, alarm, monitoring, audio lub energię",
     "czy masz projekt domu albo projekt instalacji elektrycznej",
-    "kiedy planujesz rozpocząć prace lub konsultację",
+    "kiedy planujesz rozpocząć prace",
   ];
 
   function handleChange(event) {
@@ -175,7 +175,10 @@ export default function ContactFormSection() {
             {isSending ? "Wysyłanie..." : "Wyślij wiadomość"}
           </button>
 
-          <p className="contact-form__note">Nie musisz znać szczegółów technicznych. Wystarczy ogólny opis sytuacji.</p>
+          <p className="contact-form__note">
+            Twoja wiadomość zostanie przesłana w na naszą pocztę w postaci e-maila. Regularnie sprawdzamy skrzynkę i odpowiadamy w ciągu 24 godzin.
+          </p>
+          <p className="contact-form__note">Coś nie działa? Będziemy wdzięczni, jeśli dasz nam znać przy okazji najbliższej rozmowy.</p>
 
           <div className="contact-direct-box contact-direct-box--mobile">
             <p>Kontakt bezpośredni</p>
@@ -196,9 +199,9 @@ export default function ContactFormSection() {
           </div>
 
           <div className="contact-direct-box">
-            <p>Kontakt bezpośredni</p>
+            {/* <p>Kontakt bezpośredni</p> */}
             <a href="mailto:czajkowskismart@gmail.com">czajkowskismart@gmail.com</a>
-            <a href="tel:+48530128138">530 128 138</a>
+            <a href="tel:+48530128138">tel: +48 530 128 138</a>
           </div>
         </aside>
       </div>

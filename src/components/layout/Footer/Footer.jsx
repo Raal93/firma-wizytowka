@@ -36,11 +36,11 @@ export default function Footer() {
         <div className="footer-contact">
           <span>Kontakt</span>
 
-          <a href="tel:+48530128138">530 128 138</a>
+          <a href="tel:+48530128138">+48 530 128 138</a>
           <a href="mailto:czajkowskismart@gmail.com">czajkowskismart@gmail.com</a>
 
           <p>
-            <Link to="/kontakt">Kraków i okolice</Link>
+            <Link to="/kontakt#service-area-map">Kraków i okolice</Link>
           </p>
         </div>
       </div>

@@ -265,6 +265,7 @@
   border-radius: 18px;
   background: radial-gradient(circle at center, rgba(30, 64, 175, 0.28) 0%, rgba(2, 6, 23, 1) 68%), #020617;
   border: 1px solid rgba(148, 163, 184, 0.14);
+  cursor: pointer;
 }
 
 .modal__imageFrame img {
@@ -448,6 +449,73 @@
   box-shadow: 0 16px 36px rgba(37, 99, 235, 0.36);
 }
 
+/* FULLSCREEN IMAGE */
+
+.imageFullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 1005;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, rgba(37, 99, 235, 0.16), transparent 34%), rgba(2, 6, 23, 0.94);
+  backdrop-filter: blur(16px);
+  cursor: zoom-out;
+  animation: fullscreenFade 0.22s ease forwards;
+}
+
+.imageFullscreen__inner {
+  position: relative;
+  max-width: min(1500px, 100%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  cursor: default;
+  animation: fullscreenImageEnter 0.25s ease forwards;
+}
+
+.imageFullscreen__inner img {
+  max-width: 100%;
+  max-height: calc(100vh - 110px);
+  display: block;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow:
+    0 36px 120px rgba(0, 0, 0, 0.72),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.imageFullscreen__close {
+  position: fixed;
+  top: 22px;
+  right: 24px;
+  z-index: 1010;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.86);
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.imageFullscreen__close:hover {
+  background: rgba(37, 99, 235, 0.94);
+  border-color: rgba(147, 197, 253, 0.72);
+  transform: scale(1.05);
+}
+
 /* ANIMATIONS */
 
 .modal--closing {
@@ -499,6 +567,28 @@
   to {
     opacity: 0;
     transform: scale(0.96) translateY(20px);
+  }
+}
+
+@keyframes fullscreenFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fullscreenImageEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -571,6 +661,15 @@
 
   .modal__button {
     width: 100%;
+  }
+
+  .imageFullscreen {
+    padding: 20px;
+  }
+
+  .imageFullscreen__inner img {
+    max-height: calc(100vh - 105px);
+    border-radius: 14px;
   }
 }
 
@@ -653,6 +752,22 @@
   .modal__right p,
   .modal__right li {
     font-size: 15px;
+  }
+
+  .imageFullscreen {
+    padding: 14px;
+  }
+
+  .imageFullscreen__close {
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .imageFullscreen__inner img {
+    max-height: calc(100vh - 100px);
+    border-radius: 12px;
   }
 }
 

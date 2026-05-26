@@ -6,7 +6,7 @@ export default function ContactProcess() {
     {
       number: "01",
       title: "Wysyłasz zapytanie",
-      text: "Krótko opisujesz dom, etap inwestycji i to, co chcesz zautomatyzować.",
+      text: "Opis domu, etap inwestycji i to, co chcesz zautomatyzować.",
     },
     {
       number: "02",
@@ -15,8 +15,8 @@ export default function ContactProcess() {
     },
     {
       number: "03",
-      title: "Dobieramy kierunek",
-      text: "Określamy, czy potrzebna jest koncepcja, wizja lokalna, czy wstępna wycena.",
+      title: "Ustalamy, co dalej",
+      text: "Sprawdzamy, czy wystarczy rozmowa i wstępna wycena, czy potrzebna będzie wizja lokalna.",
     },
     {
       number: "04",
@@ -31,7 +31,7 @@ export default function ContactProcess() {
         <div className="contact-info contact-surface">
           <span className="contact-eyebrow">Jak wygląda kontakt?</span>
 
-          <h2>Krótko, konkretnie i bez zgadywania</h2>
+          <h2>Najpierw poznajemy potrzeby, potem dobieramy rozwiązania</h2>
 
           <div className="contact-steps">
             {contactSteps.map((step) => (

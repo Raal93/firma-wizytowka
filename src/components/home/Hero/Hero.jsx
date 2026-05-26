@@ -57,11 +57,10 @@ function Hero() {
         <div className="hero__buttons">
           <Link to="/kontakt#formularz" className="hero__button hero__button--primary">
             Poproś o wycenę
-            <ArrowRight size={18} strokeWidth={2.2} />
           </Link>
 
           <a href="tel:+48530128138" className="hero__button hero__button--secondary">
-            Zadzwoń: 530 128 138
+            Zadzwoń: +48 530 128 138
           </a>
         </div>
 

@@ -8,9 +8,9 @@ export default function ContactPage() {
   return (
     <main className="contact-page">
       <ContactHero />
+      <ContactFormSection />
       <ServiceAreaMap />
       <ContactProcess />
-      <ContactFormSection />
     </main>
   );
 }

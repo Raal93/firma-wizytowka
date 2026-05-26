@@ -10,10 +10,8 @@ export default function ContactInfoPanels() {
       </div>
 
       <div className="contact-projects-box">
-        <h3>Zobacz realizacje techniczne</h3>
-        <p>
-          Realizacje pokazują podejście do instalacji, rozdzielni, monitoringu, wideodomofonów i infrastruktury potrzebnej pod nowoczesny Smart Home.
-        </p>
+        <h3>Nie widziałeś jeszcze naszych realizacji?</h3>
+        <p>Zobacz, jak podchodzimy do instalacji, rozdzielni, monitoringu, wideodomofonów i infrastruktury pod nowoczesny Smart Home.</p>
 
         <Link to="/realizacje" className="contact-link">
           Zobacz realizacje

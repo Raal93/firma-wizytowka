@@ -15,7 +15,7 @@ const trustCards = [
   {
     label: "Oszczędność energii",
     title: "Komfort, który pomaga obniżać koszty",
-    text: "Projektujemy automatykę tak, aby dom działał efektywnie. Ogrzewanie, rolety, oświetlenie i wentylacja współpracują ze sobą, zamiast działać niezależnie. To przekłada się na większy komfort, lepszą kontrolę i realne oszczędności energii.",
+    text: "Projektujemy automatykę tak, aby dom działał efektywnie. Ogrzewanie, rolety, oświetlenie i wentylacja współpracują ze sobą, zapewniając większy komfort, lepszą kontrolę i realne oszczędności energii.",
   },
 ];
 
@@ -32,8 +32,8 @@ export default function TrustSection() {
             </h2>
 
             <p>
-              Bo dobra instalacja smart home nie zaczyna się od aplikacji. Zaczyna się od poprawnego projektu, przemyślanego okablowania, stabilnej
-              komunikacji i osoby, która rozumie cały system.
+              Bo dobra instalacja smart home zaczyna się od poprawnego projektu, przemyślanego okablowania, dobrej komunikacji i osoby, która rozumie
+              cały system.
             </p>
 
             <div className="trust-impact-bottom">

@@ -14,27 +14,38 @@
   border-radius: 22px;
   padding: 0;
   overflow: hidden;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
-.smart-faq__item summary {
+.smart-faq__item--open {
+  border-color: rgba(125, 211, 252, 0.24);
+  background: rgba(15, 23, 42, 0.72);
+  box-shadow: 0 18px 48px rgba(2, 6, 23, 0.28);
+}
+
+.smart-faq__trigger {
+  width: 100%;
+  border: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
   padding: 20px 22px;
+  background: transparent;
   color: #ffffff;
+  font: inherit;
   font-size: 1rem;
   font-weight: 850;
   line-height: 1.35;
+  text-align: left;
   cursor: pointer;
-  list-style: none;
 }
 
-.smart-faq__item summary::-webkit-details-marker {
-  display: none;
-}
-
-.smart-faq__item summary::after {
+.smart-faq__trigger::after {
   content: "+";
   flex: 0 0 auto;
   width: 30px;
@@ -46,13 +57,43 @@
   color: var(--smart-accent-soft);
   background: rgba(56, 189, 248, 0.08);
   font-size: 1.1rem;
+  line-height: 1;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
-.smart-faq__item[open] summary::after {
+.smart-faq__item--open .smart-faq__trigger::after {
   content: "–";
+  transform: rotate(180deg);
+  border-color: rgba(125, 211, 252, 0.45);
+  background: rgba(56, 189, 248, 0.14);
 }
 
-.smart-faq__item p {
+.smart-faq__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    grid-template-rows 0.34s ease,
+    opacity 0.24s ease,
+    transform 0.24s ease;
+}
+
+.smart-faq__item--open .smart-faq__content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.smart-faq__content-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.smart-faq__content p {
   margin: 0;
   padding: 0 22px 22px;
   color: var(--smart-muted);
@@ -66,11 +107,11 @@
 }
 
 @media (max-width: 650px) {
-  .smart-faq__item summary {
+  .smart-faq__trigger {
     padding: 18px;
   }
 
-  .smart-faq__item p {
+  .smart-faq__content p {
     padding: 0 18px 18px;
   }
 }

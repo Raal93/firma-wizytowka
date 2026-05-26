@@ -39,7 +39,7 @@ export default function ServiceAreaMap() {
   const radius = 100000;
 
   return (
-    <section className="service-area-section">
+    <section id="service-area-map" className="service-area-section">
       <div className="service-area-container">
         <div className="service-area-layout">
           <div className="service-area-content">
@@ -47,7 +47,7 @@ export default function ServiceAreaMap() {
 
             <h2>Kraków / okolice</h2>
 
-            <p>Realizuję systemy Smart Home w Krakowie i okolicznych miejscowościach. Zakres dojazdu ustalamy indywidualnie.</p>
+            <p>Realizujemy systemy Smart Home w Krakowie i okolicy. Zakres dojazdu ustalamy indywidualnie.</p>
 
             <p className="service-area-text-note">
               Standardowo działamy w promieniu około 100 km od Krakowa. W określonych przypadkach możliwa jest realizacja również dalej.
@@ -91,7 +91,7 @@ export default function ServiceAreaMap() {
               </MapContainer>
             </div>
 
-            <p className="service-area-map-note">Najedź kursorem na mapę, aby przybliżać ją kółkiem myszy.</p>
+            <p className="service-area-map-note">Najedź kursorem na mapę i przybliż kółkiem myszy.</p>
           </div>
         </div>
       </div>
